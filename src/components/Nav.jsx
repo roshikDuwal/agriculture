@@ -1,8 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../assets/images/logo.png"
+import Logo from "../../assets/images/logo.png";
+
+import {
+  Drawer,
+  DrawerBody,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  useDisclosure,
+  Button,
+  Flex,
+} from "@chakra-ui/react";
+
 const Nav = () => {
   const [sticky, setSticky] = useState(false);
+
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = React.useRef();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,7 +40,7 @@ const Nav = () => {
     <>
       <header className={sticky ? "nav-sticky" : "main-header"}>
         <div className={sticky ? "d-none" : "topbar"}>
-          <div className="container" >
+          <div className="container">
             <div className="topbar__left">
               <div className="topbar__social">
                 <a href="#" className="fab fa-facebook-square"></a>
@@ -47,13 +64,17 @@ const Nav = () => {
           </div>
         </div>
 
-        <nav className="main-menu" >
+        <nav className="main-menu">
           <div className="container">
             <div className="logo-box">
-              <a href="index.html" aria-label="logo image">
+              <Link to="/" aria-label="logo image">
                 <img src={Logo} width="153" alt="" />
-              </a>
-              <span className="fa fa-bars mobile-nav__toggler"></span>
+              </Link>
+              <span
+                className="fa fa-bars mobile-nav__toggler"
+                ref={btnRef}
+                onClick={onOpen}
+              ></span>
             </div>
 
             <ul className="main-menu__list">
@@ -65,7 +86,7 @@ const Nav = () => {
                 <Link to="/about">About</Link>
               </li>
 
-              <li >
+              <li>
                 <Link to="/service">Services</Link>
               </li>
 
@@ -79,7 +100,6 @@ const Nav = () => {
             </ul>
 
             <div className="main-header__info">
-              
               {/* <a href="#" className="search-toggler main-header__search-btn">
                 <i
                   className="agrikon-icon-magnifying-glass"
@@ -102,6 +122,43 @@ const Nav = () => {
           </div>
         </nav>
       </header>
+
+      <Drawer
+        isOpen={isOpen}
+        placement="left"
+        onClose={onClose}
+        finalFocusRef={btnRef}
+      >
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton />
+          <DrawerHeader>
+            <Link to="/" aria-label="logo image">
+              <img src={Logo} width="153" alt="" />
+            </Link>
+          </DrawerHeader>
+
+          <DrawerBody>
+            <Flex direction="column" gap="3">
+              <Link to="/" onClick={onClose}>
+                HOME
+              </Link>
+              <Link to="/about" onClick={onClose}>
+                ABOUT US
+              </Link>
+              <Link to="/service" onClick={onClose}>
+                SERVICE
+              </Link>
+              <Link to="/products" onClick={onClose}>
+                PRODUCTS
+              </Link>
+              <Link to="/contact" onClick={onClose}>
+                CONTACT
+              </Link>
+            </Flex>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
     </>
   );
 };
