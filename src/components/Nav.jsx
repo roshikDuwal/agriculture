@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import Logo from "../../assets/images/logo.png"
 const Nav = () => {
   const [sticky, setSticky] = useState(false);
 
@@ -51,7 +51,7 @@ const Nav = () => {
           <div className="container">
             <div className="logo-box">
               <a href="index.html" aria-label="logo image">
-                <img src="assets/images/logo.png" width="153" alt="" />
+                <img src={Logo} width="153" alt="" />
               </a>
               <span className="fa fa-bars mobile-nav__toggler"></span>
             </div>
