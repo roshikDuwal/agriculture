@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react'
 import ServiceList from '../components/ServiceList'
+import Serviceimage from "../../assets/images/resources/feature-1-1.jpg"
+import Serviceimage2 from "../../assets/images/resources/cta-3-1.jpg"
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from 'react-router-dom';
 
 const Service = () => {
 
@@ -62,21 +65,21 @@ const Service = () => {
                     </div>
                     <div className="col-lg-6">
                         <div className="feature-one__image">
-                            <img src="assets/images/resources/feature-1-1.jpg" alt=""/>
+                            <img src={Serviceimage} alt=""/>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section className="call-to-action__two jarallax" data-jarallax data-speed="0.3" data-imgPosition="50% 50%">
+        {/* <section className="call-to-action__two jarallax" data-jarallax data-speed="0.3" data-imgPosition="50% 50%">
             <img className="call-to-action__two__bg jarallax-img" src="assets/images/backgrounds/cta-2-bg-1.jpg" alt="parallax-image" />
             <div className="container">
                 <h3>Agriculture Matters to
                     the Future</h3>
-                <a href="about.html" className="thm-btn">Discover More</a>
+                <Link to="/about" className="thm-btn">Discover More</Link>
             </div>
-        </section>
+        </section> */}
 
 
         <section className="call-to-action__three jarallax" data-jarallax data-speed="0.3" data-imgPosition="50% 50%">
@@ -85,8 +88,8 @@ const Service = () => {
                 <div className="row">
                     <div className="col-lg-5">
                         <div className="call-to-action__three-image">
-                            <img src="assets/images/resources/cta-3-1.jpg" alt=""/>
-                            <img src="assets/images/resources/cta-3-2.jpg" alt=""/>
+                            <img src={Serviceimage2} alt=""/>
+                            
                         </div>
                     </div>
                     <div className="col-lg-7">

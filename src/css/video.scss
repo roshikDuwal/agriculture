@@ -32,7 +32,7 @@
   }
 }
 
-@media (max-width: 1116px) {
+@media (max-width: 1425px) {
   .section5 {
     height: auto;
     flex-direction: column;
@@ -64,33 +64,14 @@
   }
 }
 
-@media (max-width: 885px) {
-  .section5 > .content {
-    padding: 10px;
-    width: 50vw !important;
-  }
 
-  .section5 > .content h2 {
-    font-size: 3rem !important; /* Adjust the font size for smaller screens */
-  }
-
-  .section5 > .content p {
-    font-size: 16px !important; /* Adjust the font size for smaller screens */
-    line-height: 1.5 !important; /* Improve readability with increased line height */
-  }
-
-  .section5 > .content .thm-btn {
-    margin-top: 12px !important;
-    font-size: 10px !important; /* Add spacing between the button and the content */
-
-  }
-}
 
 @media (max-width: 885px) {
   .section5 > .content {
     padding: 5px;
     height: 70%;
-    width: 80vw !important;
+    width: 100vw !important;
+    text-align: center;
     
   }
   .section5 > .content .tagline {
@@ -98,17 +79,18 @@
   }
 
   .section5 > .content h2 {
-    font-size: 2.5rem !important; /* Adjust the font size for smaller screens */
+    margin-top: 1rem !important;
+    font-size: 2.9rem !important; /* Adjust the font size for smaller screens */
   }
 
   .section5 > .content p {
-    font-size: 10px !important; /* Adjust the font size for smaller screens */
-    line-height: 1.5 !important; /* Improve readability with increased line height */
+    font-size: 16px !important; /* Adjust the font size for smaller screens */
+    line-height: 1 !important; /* Improve readability with increased line height */
   }
 
   .section5 > .content .thm-btn {
-    margin-top: 12px !important;
-    font-size: 8px !important; /* Add spacing between the button and the content */
+    margin-top: 5px !important;
+    font-size: 15px !important; /* Add spacing between the button and the content */
     padding: 10px !important;
 
   }
@@ -138,7 +120,7 @@
 
   .section5 > .content .thm-btn {
     margin-top: 2px !important;
-    font-size: 6px !important; /* Add spacing between the button and the content */
+    font-size: 10px !important; /* Add spacing between the button and the content */
     padding: 7px !important;
 
   }

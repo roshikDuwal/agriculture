@@ -25,58 +25,8 @@ const Home = () => {
   }, []);
   return (
     <>
-      {/* <div className="preloader">
-        <img
-          className="preloader__image"
-          width="55"
-          src="assets/images/loader.png"
-          alt=""
-        />
-      </div> */}
 
-      {/* <section className="main-slider">
-        <div className="swiper-container thm-swiper__slider">
-          <div className="swiper-wrapper">
-            <div className="swiper-slide">
-              <div className="image-layer" style={sliderImage}></div>
 
-              <div className="container">
-                <div className="row">
-                  <div className="col-xl-7 col-lg-7">
-                    <span className="tagline">Welcome to Agriculture Farm</span>
-                    <h2>
-                      <span>Agriculture</span> <br />& Eco Farming
-                    </h2>
-                    <p>
-                      There are many of passages of lorem Ipsum, but the majori
-                      have <br />
-                      suffered alteration in some form.
-                    </p>
-                    <a href="#" className="thm-btn">
-                      Discover More
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="main-slider__nav">
-            <div
-              className="swiper-button-prev"
-              id="main-slider__swiper-button-next"
-            >
-              <i className="agrikon-icon-left-arrow"></i>
-            </div>
-            <div
-              className="swiper-button-next"
-              id="main-slider__swiper-button-prev"
-            >
-              <i className="agrikon-icon-right-arrow"></i>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
       <div className="section5">
         <video
@@ -95,7 +45,7 @@ const Home = () => {
               <div className="col-xl-7 col-lg-12">
                 <span className="tagline">Welcome to Duwal R And R </span>
                 <h2>
-                  <span>Agriculture</span> <br />& Eco Farming
+                 Agriculture & Eco Farming
                 </h2>
                 <p>
                   There are many of passages of lorem Ipsum, but the majori have{" "}

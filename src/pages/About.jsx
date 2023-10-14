@@ -1,7 +1,12 @@
 import React, { useEffect } from "react";
-import Testimonial from "../components/Testimonial";
+
 import { Link } from "react-router-dom";
 import AboutImage from "../../assets/images/team/team-1-1.jpg"
+import Aboutimage1 from "../../assets/images/services/service-1-1.jpg"
+import Aboutimage2 from "../../assets/images/services/service-1-2.jpg"
+import Aboutimage3 from "../../assets/images/services/service-1-3.jpg"
+import Experienceimage from "../../assets/images/resources/about-3-2.jpg"
+import BACKGROUNDIMAGE from "../../assets/images/backgrounds/cta-1-bg-1.jpg"
 
 const myStyle = {
   backgroundImage: "url('assets/images/backgrounds/page-header-bg-1-1.jpg')",
@@ -76,7 +81,7 @@ const About = () => {
           <div className="row">
             <div className="col-md-12 col-lg-4">
               <div className="service-one__box">
-                <img src="assets/images/services/service-1-1.jpg" alt="" />
+                <img src={Aboutimage1} alt="" />
                 <div className="service-one__box-content">
                   <h3>
                     <a href="service-details.html">Agriculture Leader</a>
@@ -86,7 +91,7 @@ const About = () => {
             </div>
             <div className="col-md-12 col-lg-4">
               <div className="service-one__box">
-                <img src="assets/images/services/service-1-2.jpg" alt="" />
+                <img src={Aboutimage2} alt="" />
                 <div className="service-one__box-content">
                   <h3>
                     <a href="service-details.html">Quality Standards</a>
@@ -96,7 +101,7 @@ const About = () => {
             </div>
             <div className="col-md-12 col-lg-4">
               <div className="service-one__box">
-                <img src="assets/images/services/service-1-3.jpg" alt="" />
+                <img src={Aboutimage3} alt="" />
                 <div className="service-one__box-content">
                   <h3>
                     <a href="service-details.html">Organic Services</a>
@@ -115,7 +120,7 @@ const About = () => {
           <div className="row">
             <div className="col-lg-6">
               <div className="about-three__image">
-                <img src="assets/images/resources/about-3-2.jpg" alt="" />
+                <img src={Experienceimage} alt="" />
               </div>
             </div>
             <div className="col-lg-6">
@@ -150,10 +155,7 @@ const About = () => {
                     Donec scelerisque dolor id nunc dictum, interdum.{" "}
                   </p>
                 </div>
-                <div className="about-three__signs">
-                  <img src="assets/images/resources/about-3-1.png" alt="" />
-                  <img src="assets/images/resources/sign-1-1.png" alt="" />
-                </div>
+                
               </div>
             </div>
           </div>
@@ -170,7 +172,7 @@ const About = () => {
       >
         <img
           className="call-to-action__bg jarallax-img"
-          src="assets/images/backgrounds/cta-1-bg-1.jpg"
+          src={BACKGROUNDIMAGE}
           alt="parallax-image"
         />
 

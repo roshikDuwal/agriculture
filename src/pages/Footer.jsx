@@ -12,12 +12,7 @@ const Footer = () => {
       </a>
 
       <footer className="site-footer">
-        <img
-          src="assets/images/icons/footer-bg-icon-1.png"
-          className="site-footer__shape-1"
-          alt=""
-        />
-        <img src={footerimage2} className="site-footer__shape-2" alt="" />
+        
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-6 col-lg-6 col-xl-5">

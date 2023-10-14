@@ -111,21 +111,6 @@ const Contact = () => {
                   </div>
 
                   <div className="col-lg-12">
-                    <input
-                      id="subject"
-                      type="text"
-                      name="subject"
-                      placeholder="Subject"
-                      required
-                    />
-                    <ValidationError
-                      prefix="Message"
-                      field="message"
-                      errors={state.errors}
-                    />
-                  </div>
-
-                  <div className="col-lg-12">
                     <textarea
                       id="message"
                       name="message"
