@@ -3,30 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <section
-        className="call-to-action jarallax"
-        data-jarallax
-        data-speed="0.3"
-        // data-imgPosition="-80% 50%"
-      >
-        <img
-          className="call-to-action__bg jarallax-img"
-          src="assets/images/backgrounds/cta-1-bg-1.jpg"
-          alt="parallax-image"
-        />
 
-        <div className="container">
-          <div className="call-to-action__content">
-            <i className="call-to-action__icon agrikon-icon-agriculture-2"></i>
-            <h3>We’re popular leader in agriculture market globally</h3>
-          </div>
-          <div className="call-to-action__button">
-            <a href="services.html" className="thm-btn">
-              Discover More
-            </a>
-          </div>
-        </div>
-      </section>
 
       <footer className="site-footer">
         <img

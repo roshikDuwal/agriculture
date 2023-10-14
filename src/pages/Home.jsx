@@ -5,6 +5,8 @@ import Productlist from "../components/Productlist";
 import ServiceList from "../components/ServiceList";
 import { Link } from "react-router-dom";
 import { Image } from "@chakra-ui/react";
+import "../css/video.scss";
+import HomeVideo from "../../video/homevideo.mp4";
 
 const sliderImage = {
   backgroundImage: 'url("assets/images/main-slider/main-slider-1-1.jpg")',
@@ -29,7 +31,7 @@ const Home = () => {
         />
       </div> */}
 
-      <section className="main-slider">
+      {/* <section className="main-slider">
         <div className="swiper-container thm-swiper__slider">
           <div className="swiper-wrapper">
             <div className="swiper-slide">
@@ -71,7 +73,40 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      <div className="section5">
+        <video
+          loop
+          muted
+          autoPlay="autoplay"
+          playsInline
+          className="back-video"
+        >
+          <source className="source" src={HomeVideo} type="video/mp4" />
+        </video>
+
+        <div className="content">
+          <div className="container">
+            <div className="row">
+              <div className="col-xl-7 col-lg-12">
+                <span className="tagline">Welcome to Duwal R And R </span>
+                <h2>
+                  <span>Agriculture</span> <br />& Eco Farming
+                </h2>
+                <p>
+                  There are many of passages of lorem Ipsum, but the majori have{" "}
+                  <br />
+                  suffered alteration in some form.
+                </p>
+                <a href="#" className="thm-btn">
+                  Discover More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <section className="about-one" style={{ paddingTop: "1px !important" }}>
         <img
@@ -188,7 +223,7 @@ const Home = () => {
 
                 <div className="contact-two__image-bubble-3"></div>
 
-                <Image 
+                <Image
                   hideBelow="md"
                   src="assets/images/resources/contact-1-1.jpg"
                   className="img-fluid"
@@ -208,7 +243,8 @@ const Home = () => {
 
                 <div className="contact-two__summery">
                   <p>
-                  "Share Your Voice, Cultivate Connection - Drop Your Thoughts Here."
+                    "Share Your Voice, Cultivate Connection - Drop Your Thoughts
+                    Here."
                   </p>
                 </div>
               </div>
@@ -254,6 +290,30 @@ const Home = () => {
                 </div>
               </form>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="call-to-action jarallax"
+        data-jarallax
+        data-speed="0.3"
+      >
+        <img
+          className="call-to-action__bg jarallax-img"
+          src="assets/images/backgrounds/cta-1-bg-1.jpg"
+          alt="parallax-image"
+        />
+
+        <div className="container">
+          <div className="call-to-action__content">
+            <i className="call-to-action__icon agrikon-icon-agriculture-2"></i>
+            <h3>We’re popular leader in agriculture market globally</h3>
+          </div>
+          <div className="call-to-action__button">
+            <a href="services.html" className="thm-btn">
+              Discover More
+            </a>
           </div>
         </div>
       </section>

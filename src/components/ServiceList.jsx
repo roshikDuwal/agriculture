@@ -51,7 +51,7 @@ const ServiceList = () => {
                     </div>
 
                     <h3>
-                      <a >Agriculture equipments</a>
+                  Agriculture equipments
                     </h3>
                     <p>
                       "Agriculture equipment, ranging from plows to harvesters
@@ -79,8 +79,8 @@ const ServiceList = () => {
                       <i className="agrikon-icon-tractor"></i>
                     </div>
 
-                    <h3>
-                      <a>Machine repair</a>
+                    <h3 style={{width:"100% !important"}}>
+                      Machine repair
                     </h3>
                     <p>
                       "We specialize in expert machine repair, restoring your
