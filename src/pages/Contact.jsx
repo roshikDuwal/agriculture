@@ -1,9 +1,35 @@
 import React, { useEffect } from "react";
+import { useForm, ValidationError } from "@formspree/react";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+import { useToast } from "@chakra-ui/react";
+
 const Contact = () => {
+  const toast = useToast();
+
+  const [state, handleSubmit] = useForm("xvojdboq");
+
+  if (state.succeeded) {
+    toast({
+      title: "SEND sUCCESSFULLY",
+      status: "success",
+      duration: 9000,
+      isClosable: true,
+    });
+    setTimeout(function () {
+      window.location.reload();
+    }, 2000);
+  } else if (state.errors) {
+    toast({
+      title: "Error Found !!",
+      status: "error",
+      duration: 9000,
+      isClosable: true,
+    });
+  }
+
   useEffect(() => {
     AOS.init({ duration: 1000 });
     window.scrollTo(0, 0);
@@ -44,11 +70,8 @@ const Contact = () => {
                 </div>
                 <div className="contact-one__summery">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur notted adipisicing
-                    elit sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua lonm andhn. Aenean tincidunt id mauris id
-                    auctor. Donec at ligula lacus dignissim mi quis simply
-                    neque.
+                    "Share Your Voice, Cultivate Connection - Drop Your Thoughts
+                    Here."
                   </p>
                 </div>
                 <div className="contact-one__social">
@@ -66,38 +89,62 @@ const Contact = () => {
             </div>
             <div className="col-sm-12 col-md-12 col-lg-6 col-xl-8">
               <form
-                action="assets/inc/sendemail.php"
+                onSubmit={handleSubmit}
                 className="contact-one__form contact-form-validated"
               >
                 <div className="row">
-                  <div className="col-lg-6">
-                    <input type="text" name="name" placeholder="Full Name" />
-                  </div>
-                  <div className="col-lg-6">
+                  <div className="col-lg-12">
                     <input
+                      id="email"
                       type="text"
                       name="email"
                       placeholder="Email Address"
+                      required
+                      autoComplete="off"
+                    />
+                    <ValidationError
+                      prefix="Email"
+                      field="email"
+                      style={{ color: "red" }}
+                      errors={state.errors}
                     />
                   </div>
-                  <div className="col-lg-6">
+
+                  <div className="col-lg-12">
                     <input
+                      id="subject"
                       type="text"
-                      name="phone"
-                      placeholder="Phone Number"
+                      name="subject"
+                      placeholder="Subject"
+                      required
+                    />
+                    <ValidationError
+                      prefix="Message"
+                      field="message"
+                      errors={state.errors}
                     />
                   </div>
-                  <div className="col-lg-6">
-                    <input type="text" name="subject" placeholder="Subject" />
-                  </div>
+
                   <div className="col-lg-12">
                     <textarea
+                      id="message"
                       name="message"
                       placeholder="Write Message"
+                      required
                     ></textarea>
+                    <ValidationError
+                      prefix="Message"
+                      field="message"
+                      errors={state.errors}
+                    />
                   </div>
+
                   <div className="col-lg-12">
-                    <button type="submit" className="thm-btn">
+                    <button
+                      type="submit"
+                      className="thm-btn"
+                      disabled={state.submitting}
+                    >
                       Send a Message
                     </button>
                   </div>
@@ -155,7 +202,9 @@ const Contact = () => {
       <div className="google-map__home-two">
         <iframe
           title="template google map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4562.753041141002!2d-118.80123790098536!3d34.152323469614075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco+Wholesale!5e0!3m2!1sbn!2sbd!4v1562518641290!5m2!1sbn!2sbd"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3533.48101962821!2d85.4387418!3d27.6715242!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb05a6697cb139%3A0xe358dc5e6db17b91!2sDuwal%20R%20%26%20R%20Enterprise%20(Tractor%20Suppliers)!5e0!3m2!1sen!2snp!4v1697299744709!5m2!1sen!2snp"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
           className="map__home-two"
           allowFullScreen
         ></iframe>

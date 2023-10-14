@@ -8,10 +8,10 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
-import ServiceImage1 from "../../assets/images/services/service-2-1.jpg"
-import ServiceImage2 from "../../assets/images/services/service-2-1.jpg"
+import ServiceImage1 from "../../assets/images/services/service-2-1.jpg";
+import ServiceImage2 from "../../assets/images/services/service-2-1.jpg";
 
-const   ServiceList = () => {
+const ServiceList = () => {
   return (
     <>
       <section className="service-two">
@@ -33,18 +33,12 @@ const   ServiceList = () => {
               width={"100%"}
             >
               <Card className="service-two__card" width="30rem" height="35rem">
-                <CardBody
-                  p={0}
-                  height="100%"
-                 
-                >
+                <CardBody p={0} height="100%">
                   <Box className="service-two__card-image" height="40%">
-                    <Image
-                      src={ServiceImage1}
-                      alt=""
-                    />
+                    <Image src={ServiceImage1} alt="" />
                   </Box>
-                  <Flex height="60%"
+                  <Flex
+                    height="60%"
                     direction="column"
                     className="service-two__card-content"
                   >
@@ -52,9 +46,7 @@ const   ServiceList = () => {
                       <i className="agrikon-icon-tractor"></i>
                     </div>
 
-                    <h3>
-                  Agriculture equipments
-                    </h3>
+                    <h3>Agriculture equipments</h3>
                     <p>
                       "Agriculture equipment, ranging from plows to harvesters
                       and irrigation systems, revolutionizes farming by
@@ -68,12 +60,10 @@ const   ServiceList = () => {
               <Card className="service-two__card" width="30rem" height="35rem">
                 <CardBody p={0} height="100%">
                   <Box className="service-two__card-image" height="40%">
-                    <Image
-                      src={ServiceImage2}
-                      alt=""
-                    />
+                    <Image src={ServiceImage2} alt="" />
                   </Box>
-                  <Flex height="60%"
+                  <Flex
+                    height="60%"
                     direction="column"
                     className="service-two__card-content"
                   >
@@ -81,9 +71,7 @@ const   ServiceList = () => {
                       <i className="agrikon-icon-tractor"></i>
                     </div>
 
-                    <h3 style={{width:"100% !important"}}>
-                      Machine repair
-                    </h3>
+                    <h3 style={{ width: "100% !important" }}>Machine repair</h3>
                     <p>
                       "We specialize in expert machine repair, restoring your
                       equipment to peak performance and minimizing disruptions

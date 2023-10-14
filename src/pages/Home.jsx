@@ -7,9 +7,9 @@ import { Link } from "react-router-dom";
 import { Image } from "@chakra-ui/react";
 import "../css/video.scss";
 import HomeVideo from "../../video/homevideo.mp4";
-import HighQuality from "../../assets/images/resources/cta-3-1.jpg"
-import ContactImage from "../../assets/images/resources/contact-1-1.jpg"
-import BackgroundImage from "../../assets/images/backgrounds/cta-1-bg-1.jpg"
+import HighQuality from "../../assets/images/resources/cta-3-1.jpg";
+import ContactImage from "../../assets/images/resources/contact-1-1.jpg";
+import BackgroundImage from "../../assets/images/backgrounds/cta-1-bg-1.jpg";
 
 const sliderImage = {
   backgroundImage: 'url("assets/images/main-slider/main-slider-1-1.jpg")',
@@ -102,9 +102,9 @@ const Home = () => {
                   <br />
                   suffered alteration in some form.
                 </p>
-                <a href="#" className="thm-btn">
+                <Link to="/about" className="thm-btn">
                   Discover More
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -119,19 +119,6 @@ const Home = () => {
         />
         <div className="container">
           <div className="row">
-            {/* <div className="col-lg-5">
-              <div className="about-one__images">
-                <img src="assets/images/resources/about-1-1.jpg" alt="" />
-                <div
-                  className="about-one__count wow fadeInLeft"
-                  data-wow-duration="1500ms"
-                >
-                  <span>Trusted by</span>
-                  <h4>80</h4>
-                </div>
-              </div>
-            </div> */}
-
             <div className="col-lg-12" style={{ margin: "0px !important" }}>
               <div className="about-one__content">
                 <div className="block-title text-left">
@@ -157,9 +144,7 @@ const Home = () => {
                     <div className="col-lg-6">
                       <div className="about-one__box">
                         <i className="agrikon-icon-farmer"></i>
-                        <h4>
-                          <a href="about.html">Professional Farmers</a>
-                        </h4>
+                        <h4>Professional Farmers</h4>
                       </div>
                     </div>
                   </div>
@@ -197,7 +182,6 @@ const Home = () => {
             <div className="col-lg-5 wow fadeInLeft" data-wow-duration="1500ms">
               <div className="call-to-action__three-image">
                 <img src={HighQuality} alt="" />
-                
               </div>
             </div>
 
@@ -215,92 +199,12 @@ const Home = () => {
 
       <Testimonial />
 
-      <section className="contact-two">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-5">
-              <div className="contact-two__image">
-                <div className="contact-two__image-bubble-1"></div>
-
-                <div className="contact-two__image-bubble-2"></div>
-
-                <div className="contact-two__image-bubble-3"></div>
-
-                <Image
-                  hideBelow="md"
-                  src={ContactImage}
-                  className="img-fluid"
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-3">
-              <div className="contact-two__content">
-                <div className="block-title">
-                  <div className="block-title__image"></div>
-
-                  <p>Contact now</p>
-                  <h3>Leave Us A Message</h3>
-                </div>
-
-                <div className="contact-two__summery">
-                  <p>
-                    "Share Your Voice, Cultivate Connection - Drop Your Thoughts
-                    Here."
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-4">
-              <form
-                action="assets/inc/sendemail.php"
-                className="contact-one__form contact-form-validated"
-              >
-                <div className="row">
-                  <div className="col-lg-12">
-                    <input type="text" name="name" placeholder="Full Name" />
-                  </div>
-
-                  <div className="col-lg-12">
-                    <input
-                      type="text"
-                      name="email"
-                      placeholder="Email Address"
-                    />
-                  </div>
-
-                  <div className="col-lg-12">
-                    <input
-                      type="text"
-                      name="phone"
-                      placeholder="Phone Number"
-                    />
-                  </div>
-
-                  <div className="col-lg-12">
-                    <textarea
-                      name="message"
-                      placeholder="Write Message"
-                    ></textarea>
-                  </div>
-
-                  <div className="col-lg-12">
-                    <button type="submit" className="thm-btn">
-                      Send Message
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section
         className="call-to-action jarallax"
         data-jarallax
         data-speed="0.3"
+        style={{ marginTop: "20rem" }}
       >
         <img
           className="call-to-action__bg jarallax-img"
@@ -320,8 +224,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-
     </>
   );
 };
