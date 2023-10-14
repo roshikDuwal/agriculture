@@ -120,6 +120,7 @@
     padding: 2px;
     height: 70%;
    width: 100% !important;
+   text-align: center;
     
   }
   .section5 > .content .tagline {
@@ -127,14 +128,12 @@
   }
 
   .section5 > .content h2 {
-    font-size: 1.5rem !important; /* Adjust the font size for smaller screens */
+    font-size: 2.5rem !important; /* Adjust the font size for smaller screens */
     margin-top: 1px !important;
   }
 
   .section5 > .content p {
-    font-size: 8px !important; /* Adjust the font size for smaller screens */
-    line-height: 1 !important; /* Improve readability with increased line height */
-    padding-bottom: 2px !important;
+    display: none !important;
   }
 
   .section5 > .content .thm-btn {

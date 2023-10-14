@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Testimonial from "../components/Testimonial";
 import { Link } from "react-router-dom";
+import AboutImage from "../../assets/images/team/team-1-1.jpg"
 
 const myStyle = {
   backgroundImage: "url('assets/images/backgrounds/page-header-bg-1-1.jpg')",
@@ -42,14 +43,14 @@ const About = () => {
           className="team-one__bg"
         />
 
-        <div className="container">
+        <div className="container" style={{display:"flex",justifyContent:"space-around",flexWrap:"wrap",gap:"5rem"}}>
           <div className="row">
-            <div className="col-md-12 col-lg-12 col-xl-9">
+            <div className="col-md-12 col-lg-12 col-xl-12">
               <div className="team-one__content">
                 <div className="block-title">
                   <div className="block-title__image"></div>
-                  <p>meet the team</p>
-                  <h3>Expert Farmers</h3>
+                  
+                  <h3>ABOUT DUWAL R AND R</h3>
                 </div>
                 <div className="team-one__summery">
                   <p>
@@ -59,7 +60,13 @@ const About = () => {
 
             
               </div>
+              <div>
+             
+              </div>
             </div>
+          </div>
+          <div>
+          <img src={AboutImage} alt="Jessica Brown"/>
           </div>
         </div>
       </section>

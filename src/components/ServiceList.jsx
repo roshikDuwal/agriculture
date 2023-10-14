@@ -11,7 +11,7 @@ import React from "react";
 import ServiceImage1 from "../../assets/images/services/service-2-1.jpg"
 import ServiceImage2 from "../../assets/images/services/service-2-1.jpg"
 
-const ServiceList = () => {
+const   ServiceList = () => {
   return (
     <>
       <section className="service-two">
