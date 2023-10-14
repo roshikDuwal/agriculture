@@ -7,6 +7,9 @@ import { Link } from "react-router-dom";
 import { Image } from "@chakra-ui/react";
 import "../css/video.scss";
 import HomeVideo from "../../video/homevideo.mp4";
+import HighQuality from "../../assets/images/resources/cta-3-1.jpg"
+import ContactImage from "../../assets/images/resources/contact-1-1.jpg"
+import BackgroundImage from "../../assets/images/backgrounds/cta-1-bg-1.jpg"
 
 const sliderImage = {
   backgroundImage: 'url("assets/images/main-slider/main-slider-1-1.jpg")',
@@ -116,7 +119,7 @@ const Home = () => {
         />
         <div className="container">
           <div className="row">
-            <div className="col-lg-5">
+            {/* <div className="col-lg-5">
               <div className="about-one__images">
                 <img src="assets/images/resources/about-1-1.jpg" alt="" />
                 <div
@@ -127,9 +130,9 @@ const Home = () => {
                   <h4>80</h4>
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            <div className="col-lg-7" style={{ margin: "0px !important" }}>
+            <div className="col-lg-12" style={{ margin: "0px !important" }}>
               <div className="about-one__content">
                 <div className="block-title text-left">
                   <div className="block-title__image"></div>
@@ -193,8 +196,8 @@ const Home = () => {
           <div className="row">
             <div className="col-lg-5 wow fadeInLeft" data-wow-duration="1500ms">
               <div className="call-to-action__three-image">
-                <img src="assets/images/resources/cta-3-1.jpg" alt="" />
-                <img src="assets/images/resources/cta-3-2.jpg" alt="" />
+                <img src={HighQuality} alt="" />
+                
               </div>
             </div>
 
@@ -225,7 +228,7 @@ const Home = () => {
 
                 <Image
                   hideBelow="md"
-                  src="assets/images/resources/contact-1-1.jpg"
+                  src={ContactImage}
                   className="img-fluid"
                   alt=""
                 />
@@ -301,7 +304,7 @@ const Home = () => {
       >
         <img
           className="call-to-action__bg jarallax-img"
-          src="assets/images/backgrounds/cta-1-bg-1.jpg"
+          src={BackgroundImage}
           alt="parallax-image"
         />
 

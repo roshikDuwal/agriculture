@@ -1,4 +1,5 @@
 import React from 'react'
+import ProductDetail from "../../assets/images/resources/blog-cta-1.png"
 
 const Productlist = () => {
   return (
@@ -149,7 +150,7 @@ const Productlist = () => {
 
                 <div className="col-lg-3">
                   <div className="blog-home__slogan-image">
-                    <img src="assets/images/resources/blog-cta-1.png" alt="" />
+                    <img src={ProductDetail} alt="" />
                   </div>
                 </div>
               </div>

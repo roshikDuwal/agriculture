@@ -1,9 +1,13 @@
 import React from "react";
+import footerimage2 from "../../assets/images/icons/footer-bg-icon-2.png"
+import footerimage1 from "../../assets/images/logo-light.png"
 
 const Footer = () => {
   return (
     <>
-
+      <a href="#" data-target="html" className="scroll-to-target scroll-to-top">
+        <i className="fa fa-angle-up"></i>
+      </a>
 
       <footer className="site-footer">
         <img
@@ -12,7 +16,7 @@ const Footer = () => {
           alt=""
         />
         <img
-          src="assets/images/icons/footer-bg-icon-2.png"
+          src={footerimage2}
           className="site-footer__shape-2"
           alt=""
         />
@@ -21,7 +25,7 @@ const Footer = () => {
             <div className="col-sm-12 col-md-6 col-lg-6 col-xl-4">
               <div className="footer-widget">
                 <a href="index.html" className="footer-widget__Logo">
-                  <img src="assets/images/logo-light.png" width="153" alt="" />
+                  <img src={footerimage1} width="153" alt="" />
                 </a>
                 <p>
                 "Thank you for being a vital part of our farming community—your trust fuels our commitment to cultivating a prosperous future for all."

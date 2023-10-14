@@ -8,6 +8,8 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
+import ServiceImage1 from "../../assets/images/services/service-2-1.jpg"
+import ServiceImage2 from "../../assets/images/services/service-2-1.jpg"
 
 const ServiceList = () => {
   return (
@@ -38,7 +40,7 @@ const ServiceList = () => {
                 >
                   <Box className="service-two__card-image" height="40%">
                     <Image
-                      src="assets/images/services/service-2-1.jpg"
+                      src={ServiceImage1}
                       alt=""
                     />
                   </Box>
@@ -67,7 +69,7 @@ const ServiceList = () => {
                 <CardBody p={0} height="100%">
                   <Box className="service-two__card-image" height="40%">
                     <Image
-                      src="assets/images/services/service-2-1.jpg"
+                      src={ServiceImage2}
                       alt=""
                     />
                   </Box>
