@@ -1,12 +1,10 @@
 import React from "react";
-import footerimage2 from "../../assets/images/icons/footer-bg-icon-2.png";
 import footerimage1 from "../../assets/images/logo-light.png";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <>
-
       <a href="#" data-target="html" className="scroll-to-target scroll-to-top">
         <i className="fa fa-angle-up"></i>
       </a>

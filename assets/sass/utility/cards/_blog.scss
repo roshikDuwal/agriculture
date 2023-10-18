@@ -296,13 +296,17 @@
 .blog-details {
   padding-top: 80px;
   padding-bottom: 80px;
+  border: 2px solid black;
   @include laptop {
     padding-top: 120px;
     padding-bottom: 120px;
+    border: 2px solid black;
   }
+
   img {
     border-radius: $border-radius;
   }
+  
   .blog-card__content {
     padding-bottom: 0;
     box-shadow: none;

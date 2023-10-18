@@ -1,22 +1,22 @@
 import React, { useEffect } from "react";
-import Image1 from "../../assets/images/main-slider/main-slider-1-2.jpg";
 import Testimonial from "../components/Testimonial";
 import Productlist from "../components/Productlist";
 import ServiceList from "../components/ServiceList";
 import { Link } from "react-router-dom";
-import { Image } from "@chakra-ui/react";
 import "../css/video.scss";
 import HomeVideo from "../../video/homevideo.mp4";
 import HighQuality from "../../assets/images/resources/cta-3-1.jpg";
-import ContactImage from "../../assets/images/resources/contact-1-1.jpg";
 import BackgroundImage from "../../assets/images/backgrounds/cta-1-bg-1.jpg";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 const sliderImage = {
   backgroundImage: 'url("assets/images/main-slider/main-slider-1-1.jpg")',
 };
 
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 
 const Home = () => {
   useEffect(() => {

@@ -6,7 +6,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Service from "./pages/Service";
-import Product from "./pages/Product";
+import Product from "./pages/Product/Product";
+import Singleproduct from  "./pages/Product/id/Singleproduct"
+
 
 const App = () => {
   return (
@@ -14,10 +16,11 @@ const App = () => {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About/>}/>
-        <Route path="/contact" element={<Contact/>}/>
-        <Route path="/service" element={<Service/>}/>
-        <Route path="/products" element={<Product/>}/>
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/service" element={<Service />} />
+        <Route path="/products" element={<Product/>} />
+        <Route path="/product/:id" element={<Singleproduct/>}/>
       </Routes>
       <Footer />
     </Router>

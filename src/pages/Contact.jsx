@@ -13,7 +13,7 @@ const Contact = () => {
 
   if (state.succeeded) {
     toast({
-      title: "SEND sUCCESSFULLY",
+      title: "Email send successfully",
       status: "success",
       duration: 9000,
       isClosable: true,
