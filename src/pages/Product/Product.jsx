@@ -34,6 +34,8 @@ const Product = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  // console.log(data);
+
   return (
     <>
       <section className="page-header">
@@ -70,36 +72,51 @@ const Product = () => {
                 </Flex>{" "}
               </>
             ) : (
-              data?.data?.products.map((elem, index) => {
-                return (
-                  <div className="col-md-6 col-lg-4" key={elem.slug}>
-                    <div className="blog-card">
-                      <div className="blog-card__image">
+              <Flex gap="5" wrap="wrap" align="center" justify="center">
+                {data?.data?.products.map((elem) => {
+                  return (
+                    <div className="blog-card" key={elem.slug}>
+                      <div
+                        className="blog-card__image"
+                        style={{ height: "60%" }}
+                      >
                         <img
+                          style={{ objectFit: "contain", height: "100%" }}
                           src={`${Image_domain}/${elem.image}`}
                           alt="Best Way to Do Eco and Agriculture"
                         />
                       </div>
 
-                      <div className="blog-card__content">
-                        <div className="blog-card__meta"></div>
+                      <div
+                        className="blog-card__content"
+                        style={{
+                          height: "40%",
+                          width: "100%",
+                        }}
+                      >
                         <div className="blog-card__meta">
                           <a href="#">
                             <i className="far fa-user-circle"></i>
                             {elem.categories[0].title}
                           </a>
                         </div>
-                        <h3>
-                          <Link to={`/product/${elem.slug}`}>{elem.name}</Link>
-                        </h3>
-                        <Link to={`/product/${elem.slug}`} className="thm-btn">
+
+                        <div>
+                          <h3>
+                            <Link to={`/product/${elem.slug}`}>
+                              {elem.name}
+                            </Link>
+                          </h3>
+                        </div>
+
+                        <Link to={`/product/${elem.slug}`} className="thm-btn1">
                           Read More
                         </Link>
                       </div>
                     </div>
-                  </div>
-                );
-              })
+                  );
+                })}
+              </Flex>
             )}
           </div>
         </div>

@@ -5,8 +5,20 @@ import { useParams } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Image_domain } from "../../../../constants/Url";
-import { Spinner } from "@chakra-ui/react";
+import { Flex, Spinner } from "@chakra-ui/react";
 import "../../../../assets/css/main.css";
+
+import {
+  Table,
+  Thead,
+  Tbody,
+  Tfoot,
+  Tr,
+  Th,
+  Td,
+  TableCaption,
+  TableContainer,
+} from "@chakra-ui/react";
 
 const Singleproduct = () => {
   const { id } = useParams();
@@ -31,7 +43,6 @@ const Singleproduct = () => {
     AOS.init({ duration: 1000 });
     window.scrollTo(0, 0);
   }, []);
-
 
   return (
     <>
@@ -68,20 +79,21 @@ const Singleproduct = () => {
                       <div className="blog-card__content">
                         <div className="blog-card__meta">
                           <a href="#">
-                            <i className="far fa-user-circle"></i> {data?.data?.products?.categories[0].title}
+                            <i className="far fa-user-circle"></i>{" "}
+                            {data?.data?.products?.categories[0].title}
                           </a>
                         </div>
 
-                        <h2 className="product-title">{data?.data?.products?.name}</h2>
+                        <h2 className="product-title">
+                          {data?.data?.products?.name}
+                        </h2>
                         <h4 className="singleproductdescription">
                           Description
                         </h4>
                       </div>
 
                       <div className="blog-details__content singledescription">
-                        <p>
-                        {data?.data?.products?.description}
-                        </p>
+                        <p>{data?.data?.products?.description}</p>
                       </div>
                     </div>
                   </div>
@@ -104,40 +116,42 @@ const Singleproduct = () => {
                     </div>
                   </div>
 
-                  <div className="blog-author">
+                  <div className="blog-detail">
                     <div style={{ width: "100%" }}>
-                      <table className="content-table">
-                        <thead>
-                          <tr>
-                            <th>SN</th>
-                            <th>PARAMETERS</th>
-                            <th>SPECIFICATION</th>
-                          </tr>
-                        </thead>
-
-                        <tbody>
-                          <tr>
-                            <td>1</td>
-                            <td>Brand Name</td>
-                            <td>BKT KISHAN</td>
-                          </tr>
-                          <tr>
-                            <td>2</td>
-                            <td>Model</td>
-                            <td>BKT Kishan 170F, 900, Minitiller</td>
-                          </tr>
-                          <tr>
-                            <td>3</td>
-                            <td>Transmission</td>
-                            <td>Belt type Transmission</td>
-                          </tr>
-                          <tr>
-                            <td>4</td>
-                            <td>Gear Shift</td>
-                            <td>-1,0,1,2</td>
-                          </tr>
-                        </tbody>
-                      </table>
+                      <Flex align="center" justify="center" width="100%">
+                        <TableContainer
+                          className="content-table"
+                          width="70%"
+                          border="2px"
+                          borderColor={"blackAlpha.300"}
+                        >
+                          <Table
+                            variant="striped"
+                            colorScheme={"blackAlpha"}
+                            size="lg"
+                          >
+                            <Thead>
+                              <Tr>
+                                <Th>S.N.</Th>
+                                <Th>PARAMETER</Th>
+                                <Th>SPECIFICATION</Th>
+                              </Tr>
+                            </Thead>
+                            <Tbody>
+                              <Tr>
+                                <Td>1</Td>
+                                <Td>BRAND</Td>
+                                <Td>BKT KISAN</Td>
+                              </Tr>
+                              <Tr>
+                                <Td>2</Td>
+                                <Td>Model</Td>
+                                <Td>Belt tyoe model</Td>
+                              </Tr>
+                            </Tbody>
+                          </Table>
+                        </TableContainer>
+                      </Flex>
                     </div>
                   </div>
                 </div>
