@@ -7,16 +7,14 @@ import "../css/video.scss";
 import HomeVideo from "../../video/homevideo.mp4";
 import HighQuality from "../../assets/images/resources/cta-3-1.jpg";
 import BackgroundImage from "../../assets/images/backgrounds/cta-1-bg-1.jpg";
+import ProductDetail from "../../assets/images/resources/blog-cta-1.png";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-
 const sliderImage = {
   backgroundImage: 'url("assets/images/main-slider/main-slider-1-1.jpg")',
 };
-
-
 
 const Home = () => {
   useEffect(() => {
@@ -25,9 +23,6 @@ const Home = () => {
   }, []);
   return (
     <>
-
-
-
       <div className="section5">
         <video
           loop
@@ -44,9 +39,7 @@ const Home = () => {
             <div className="row">
               <div className="col-xl-7 col-lg-12">
                 <span className="tagline">Welcome to Duwal R And R </span>
-                <h2>
-                 Agriculture & Eco Farming
-                </h2>
+                <h2>Agriculture & Eco Farming</h2>
                 <p>
                   There are many of passages of lorem Ipsum, but the majori have{" "}
                   <br />
@@ -111,6 +104,32 @@ const Home = () => {
 
       <Productlist />
 
+      <div className="blog-home__slogan">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-9">
+              <div className="blog-home__slogan-main">
+                <i className="agrikon-icon-farm"></i>
+                <div className="blog-home__slogan-content">
+                  <h3>We Care About Our Agriculture Growth</h3>
+                  <p className="block-text">
+                    There are many variations of passages of Lorem Ipsum
+                    available, but the majority have suffered in some form, by
+                    injected humour words.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-3">
+              <div className="blog-home__slogan-image">
+                <img src={ProductDetail} alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <section className="service-one">
         <div className="container"></div>
       </section>
@@ -148,7 +167,6 @@ const Home = () => {
       </section>
 
       <Testimonial />
-
 
       <section
         className="call-to-action jarallax"

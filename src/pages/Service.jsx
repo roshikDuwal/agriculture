@@ -48,7 +48,7 @@ const Service = () => {
                                     Better Future</h3>
                             </div>
                             <div className="feature-one__summery">
-                                <p>There are many variations of passages of lorem ipsum available but the majority have suffered
+                                <p className="block-text">There are many variations of passages of lorem ipsum available but the majority have suffered
                                     alteration in some form by injected humor or random word which don't look even.</p>
                             </div>
                             <ul className="list-unstyled feature-one__check-list">

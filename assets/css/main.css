@@ -1069,6 +1069,47 @@ body {
   margin-top: 10px;
 }
 
+.blog-home__slogan {
+  padding-bottom: 80px;
+
+
+}
+
+.blog-home__slogan i {
+  font-size: 60px !important;
+  margin-right: 30px;
+  color: var(--thm-base);
+
+}
+
+.blog-home__slogan-main{
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+
+}
+
+.blog-home__slogan-main h3 {
+  margin: 0;
+  font-size: 30px;
+  color: var(--thm-black);
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+
+.blog-home__slogan p {
+    margin: 0;
+    line-height: 2.125;
+}
+
+.blog-home__slogan-image{
+
+  margin-top: 2.4rem;
+}
+
 @media (min-width: 1200px) {
   .blog-details__content p + p {
     margin-top: 30px;

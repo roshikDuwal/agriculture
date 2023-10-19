@@ -58,7 +58,7 @@ const About = () => {
                   <h3>ABOUT DUWAL R AND R</h3>
                 </div>
                 <div className="team-one__summery">
-                  <p>
+                  <p className="block-text">
                   "Welcome to Duwal R & R enterprise, where passion meets purpose in the heart of agriculture. Founded with a deep-rooted love for farming and a commitment to empower farmers, we strive to provide top-notch equipment and expertise to help you nurture your land and cultivate success. Our dedicated team shares your enthusiasm for sustainable and fruitful farming, and we're here to support your journey every step of the way. Together, let's sow the seeds of a thriving tomorrow."
                   </p>
                 </div>
@@ -149,7 +149,7 @@ const About = () => {
                   </li>
                 </ul>
                 <div className="about-three__summery">
-                  <p>
+                  <p className="block-text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit sed
                     deiusmod tempor incididunt ut labore et dolore magna aliqua.
                     Donec scelerisque dolor id nunc dictum, interdum.{" "}
