@@ -12,6 +12,8 @@ import ProductDetail from "../../assets/images/resources/blog-cta-1.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+
+
 const sliderImage = {
   backgroundImage: 'url("assets/images/main-slider/main-slider-1-1.jpg")',
 };

@@ -34,7 +34,7 @@ const Product = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  // console.log(data);
+
 
   return (
     <>
@@ -72,7 +72,7 @@ const Product = () => {
                 </Flex>{" "}
               </>
             ) : (
-              <Flex gap="5" wrap="wrap" align="center" justify="center">
+              <Flex gap="5" p={2} wrap="wrap" align="center" justify="center">
                 {data?.data?.products.map((elem) => {
                   return (
                     <div className="blog-card" key={elem.slug}>
@@ -92,6 +92,7 @@ const Product = () => {
                         style={{
                           height: "40%",
                           width: "100%",
+                          
                         }}
                       >
                         <div className="blog-card__meta">

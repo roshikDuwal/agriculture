@@ -819,8 +819,8 @@
   background-color: #fff;
   border-radius: 5px;
   margin-bottom: 30px;
-  width: 20rem;
-  height: 28rem;
+  width: 18rem;
+  height: 22rem;
   border: 1px solid rgb(226, 226, 226);
 }
 
@@ -904,7 +904,7 @@
   padding-left: 10px !important;
   padding-right: 10px !important;
   position: relative;
-  padding-top: 20px !important;
+  padding-top: 5px !important;
   padding-bottom: 10px !important;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
@@ -918,9 +918,9 @@
   }
 }
 
-.blog-card__content h3 {
+.blog-card__content div h3 {
   color: #255946;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.417;
   margin: 0;
   font-weight: bold;
@@ -1019,7 +1019,7 @@
   align-items: center;
   line-height: 1;
   color: #6e7673;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
 }
 
