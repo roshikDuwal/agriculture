@@ -75,7 +75,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <i className="agrikon-icon-pin"></i>
-                  <a href="#">80 broklyn golden street line New York, USA</a>
+                  <a href="#">Libali,Bhaktapur</a>
                 </li>
               </ul>
             </div>
@@ -89,7 +89,6 @@ const Footer = () => {
           <div className="bottom-footer__links">
             <a href="#">Terms & Conditions</a>
             <a href="#">Privacy Policy</a>
-            <a href="#">Sitemap</a>
           </div>
         </div>
       </div>

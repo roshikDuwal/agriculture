@@ -8,15 +8,12 @@ import HomeVideo from "../../video/homevideo.mp4";
 import HighQuality from "../../assets/images/resources/cta-3-1.jpg";
 import BackgroundImage from "../../assets/images/backgrounds/cta-1-bg-1.jpg";
 import ProductDetail from "../../assets/images/resources/blog-cta-1.png";
+import AboutImage from "../../assets/images/icons/about-bg-icon-1-1.png"
+import Infobg from "../../assets/images/backgrounds/cta-1-bg-1.jpg"
 
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-
-
-const sliderImage = {
-  backgroundImage: 'url("assets/images/main-slider/main-slider-1-1.jpg")',
-};
 
 const Home = () => {
   useEffect(() => {
@@ -58,7 +55,7 @@ const Home = () => {
 
       <section className="about-one" style={{ paddingTop: "1px !important" }}>
         <img
-          src="assets/images/icons/about-bg-icon-1-1.png"
+        src={AboutImage}
           className="about-one__bg-shape-1"
           alt=""
         />
@@ -145,7 +142,7 @@ const Home = () => {
       >
         <img
           className="call-to-action__three__bg jarallax-img"
-          src="assets/images/backgrounds/cta-1-bg-1.jpg"
+          src={Infobg}
           alt="parallax-image"
         />
         <div className="container">

@@ -61,7 +61,7 @@ const Product = () => {
           <div className="row">
             {loading ? (
               <>
-                <Flex width="100%" align="center" justify="center">
+                <Flex width="100%"  align="center" justify="center">
                   {" "}
                   <Spinner
                     thickness="6px"
@@ -69,7 +69,7 @@ const Product = () => {
                     emptyColor="gray.200"
                     size="xl"
                   />
-                </Flex>{" "}
+                </Flex>
               </>
             ) : (
               <Flex gap="5" p={2} wrap="wrap" align="center" justify="center">

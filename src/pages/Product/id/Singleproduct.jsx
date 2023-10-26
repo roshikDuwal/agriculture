@@ -48,8 +48,15 @@ const Singleproduct = () => {
     <>
       {loading ? (
         <>
-          {" "}
-          <Spinner />
+               <Flex width="100%"  height="70vh" align="center" justify="center">
+                  {" "}
+                  <Spinner
+                    thickness="6px"
+                    speed="0.65s"
+                    emptyColor="gray.200"
+                    size="xl"
+                  />
+                </Flex>
         </>
       ) : (
         <>
@@ -107,12 +114,6 @@ const Singleproduct = () => {
                       <a href="#">
                         <i className="fab fa-facebook-f"></i>
                       </a>
-                      <a href="#">
-                        <i className="fab fa-twitter"></i>
-                      </a>
-                      <a href="#">
-                        <i className="fab fa-linkedin-in"></i>
-                      </a>
                     </div>
                   </div>
 
@@ -146,7 +147,7 @@ const Singleproduct = () => {
                               <Tr>
                                 <Td>2</Td>
                                 <Td>Model</Td>
-                                <Td>Belt tyoe model</Td>
+                                <Td>Belt type model</Td>
                               </Tr>
                             </Tbody>
                           </Table>

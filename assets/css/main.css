@@ -1880,20 +1880,20 @@ h6 {
   outline: none !important;
   background-color: var(--thm-base);
   color: #fff;
-  font-size: 16px;
+  font-size: 13px;
   border-radius: 5px;
   font-weight: 700;
   font-family: var(--thm-font);
-  padding: 10.5px 20.5px;
+  padding: 7.5px 12.5px;
   -webkit-transition: 500ms;
   transition: 500ms;
-  background-color: var(--thm-base);
+  background-color: rgb(241, 192, 14);
   color: #fff;
 }
 
 .thm-btn1:hover {
-  color: var(--thm-base);
-  background-color: #fff;
+  color: white;
+  background-color: #047104;
 }
 
 .gray-boxed-wrapper {

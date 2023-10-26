@@ -8,25 +8,22 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
 // import required modules
-import { FreeMode, Pagination,Autoplay } from "swiper/modules";
+import { FreeMode, Pagination, Autoplay } from "swiper/modules";
 
 import { getProductData } from "../pages/Product/api/useGetProduct";
 import { Image_domain } from "../../constants/Url";
 import { Link } from "react-router-dom";
+import { Flex } from "@chakra-ui/react";
 
 const Productlist = () => {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   const getproductdata = async () => {
-    setLoading(true);
     try {
       const getdata = await getProductData();
       setData(getdata);
-      setLoading(false);
     } catch (error) {
       console.log(error);
-      setLoading(false);
     }
   };
 
@@ -35,38 +32,55 @@ const Productlist = () => {
   }, []);
 
   const customBreakpoints = {
-    320: {
+    0: {
       slidesPerView: 1,
-      spaceBetween: 10, // Customize the gap as needed
+      spaceBetween: 10, 
     },
-    600: {
+
+    650: {
       slidesPerView: 2,
-      spaceBetween: 30, // Customize the gap as needed
+      spaceBetween: 20, //
     },
-    645: {
-      slidesPerView: 2,
-      spaceBetween: 20, // Customize the gap as needed
-    },
-    940: {
+    1024: {
       slidesPerView: 3,
-      spaceBetween: 30, // Customize the gap as needed
+      spaceBetween: 10, //
     },
-    1100: {
-      slidesPerView: 5,
-      spaceBetween: 20, // Customize the gap as needed
-    },
-    1200: {
+
+    1250: {
       slidesPerView: 4,
-      spaceBetween: 20, // Customize the gap as needed
+      spaceBetween: 10, //
+    },
+    1550: {
+      slidesPerView: 5,
+      spaceBetween: 10, //
     },
   };
 
+  // const responsive = {
+  //   superLargeDesktop: {
+  //     // the naming can be any, depends on you.
+  //     breakpoint: { max: 4000, min: 3000 },
+  //     items: 5,
+  //   },
+  //   desktop: {
+  //     breakpoint: { max: 3000, min: 1024 },
+  //     items: 3,
+  //   },
+  //   tablet: {
+  //     breakpoint: { max: 1024, min: 464 },
+  //     items: 2,
+  //   },
+  //   mobile: {
+  //     breakpoint: { max: 464, min: 0 },
+  //     items: 1,
+  //   },
+  // };
 
   return (
     <>
       <section
         // className="gray-boxed-wrapper home-one__boxed"
-        style={{ marginTop: "1rem",padding:"0 2rem" }}
+        style={{ marginTop: "1rem", padding: "0 2rem" }}
       >
         <img
           src="assets/images/icons/home-1-blog-bg.png"
@@ -94,9 +108,8 @@ const Productlist = () => {
               </div>
             </div>
 
-            <div className="row" style={{paddingLeft:"15px"}}>
+            <div className="row" style={{ paddingLeft: "15px",marginTop:"15px"}}>
               <Swiper
-             
                 freeMode={true}
                 autoplay={{
                   delay: 2500,
@@ -106,22 +119,24 @@ const Productlist = () => {
                   clickable: true,
                 }}
                 breakpoints={customBreakpoints}
-                modules={[FreeMode, Pagination,Autoplay]}
-                className="mySwiper"
+                modules={[FreeMode, Pagination, Autoplay]}
+                
               >
-                {
-                  data?.data?.products.map((elem,index)=>{
-                    return (
-                      <SwiperSlide key={elem.slug}>
-                      <div className="blog-card" >
-                        <div className="blog-card__image" style={{ height: "60%" }}>
+                {data?.data?.products.map((elem, index) => {
+                  return (
+                    <SwiperSlide key={elem.slug} style={{display:"flex",alignItems:"center",justifyContent:"center" }}>
+                      <div className="blog-card">
+                        <div
+                          className="blog-card__image"
+                          style={{ height: "60%" }}
+                        >
                           <img
                             style={{ objectFit: "contain", height: "100%" }}
                             src={`${Image_domain}/${elem.image}`}
                             alt="Best Way to Do Eco and Agriculture"
                           />
                         </div>
-    
+
                         <div
                           className="blog-card__content"
                           style={{
@@ -135,23 +150,28 @@ const Productlist = () => {
                               {elem.categories[0].title}
                             </a>
                           </div>
-    
+
                           <div>
                             <h3>
-                              <Link to={`/product/${elem.slug}`}>{elem.name}</Link>
+                              <Link to={`/product/${elem.slug}`}>
+                                {elem.name}
+                              </Link>
                             </h3>
                           </div>
-    
-                          <Link to={`/product/${elem.slug}`} className="thm-btn1">
-                            Read More
-                          </Link>
+
+                          <Flex width="100%" align="center">
+                            <Link
+                              to={`/product/${elem.slug}`}
+                              className="thm-btn1"
+                            >
+                              Read More
+                            </Link>
+                          </Flex>
                         </div>
                       </div>
                     </SwiperSlide>
-                    )
-                  })
-                }
-         
+                  );
+                })}
               </Swiper>
             </div>
 
