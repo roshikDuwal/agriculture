@@ -32,7 +32,7 @@ const Testimonial = () => {
     getproductdata();
   }, []);
 
-  console.log(data?.data?.testimonial);
+
 
   return (
     <>

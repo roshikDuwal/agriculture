@@ -1150,7 +1150,7 @@ body {
 
 @media (min-width: 1200px) {
   .blog-grid {
-    padding-top: 120px;
+    padding-top: 50px;
     padding-bottom: 120px;
   }
 }
@@ -4004,7 +4004,7 @@ h6 {
   padding-top: 87px;
   padding-bottom: 88px;
   text-align: center;
-  height: 20rem;
+  height: 18rem;
 }
 
 @media (max-width: 480px) {
@@ -4169,8 +4169,8 @@ h6 {
 --------------------------------------------------------------*/
 .site-footer {
   background-color: #255946;
-  padding-top: 80px;
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   position: relative;
   margin-top: 16px;
 }
@@ -4196,8 +4196,8 @@ h6 {
 
 @media (min-width: 1200px) {
   .site-footer {
-    padding-top: 100px;
-    padding-bottom: 76px;
+    padding-top: 50px;
+    padding-bottom: 26px;
   }
 }
 
@@ -4558,15 +4558,15 @@ h6 {
 
 .bottom-footer {
   background-color: #1f4e3d;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   position: relative;
 }
 
 @media (min-width: 1200px) {
   .bottom-footer {
-    padding-top: 42.5px;
-    padding-bottom: 42.5px;
+    padding-top: 20.5px;
+    padding-bottom: 20.5px;
   }
 }
 

@@ -7,10 +7,7 @@ import Aboutimage2 from "../../assets/images/services/service-1-2.jpg"
 import Aboutimage3 from "../../assets/images/services/service-1-3.jpg"
 import Experienceimage from "../../assets/images/resources/about-3-2.jpg"
 import BACKGROUNDIMAGE from "../../assets/images/backgrounds/cta-1-bg-1.jpg"
-
-const myStyle = {
-  backgroundImage: "url('assets/images/backgrounds/page-header-bg-1-1.jpg')",
-};
+import Mystyle from "../../assets/images/backgrounds/page-header-bg-1-1.jpg"
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -25,7 +22,9 @@ const About = () => {
   return (
     <>
       <section className="page-header" >
-        <div className="page-header__bg" style={myStyle}></div>
+        <div className="page-header__bg" >
+          <img src={Mystyle} alt="" />
+        </div>
 
         <div className="container" >
           <ul className="thm-breadcrumb list-unstyled" >
