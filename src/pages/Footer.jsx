@@ -27,7 +27,7 @@ const Footer = () => {
                 <div className="mc-form__response"></div>
 
                 <div className="footer__social" style={{ paddingTop: "2rem" }}>
-                  <a href="#" className="fab fa-facebook-square"></a>
+                  <a href="https://www.facebook.com/profile.php?id=100041323845763" target="__blank" className="fab fa-facebook-square"></a>
                   <a href="#" className="fab fa-twitter"></a>
                   <a href="#" className="fab fa-pinterest-p"></a>
                   <a href="#" className="fab fa-instagram"></a>
@@ -67,11 +67,11 @@ const Footer = () => {
               <ul className="list-unstyled footer-widget__contact">
                 <li>
                   <i className="agrikon-icon-telephone"></i>
-                  <a href="tel:666-888-0000">666 888 0000</a>
+                  <a href="tel: 01-6613730"> 01-6613730</a>
                 </li>
                 <li>
                   <i className="agrikon-icon-email"></i>
-                  <a href="mailto:needhelp@company.com">needhelp@company.com</a>
+                  <a href="mailto:duwalrandr@gmail.com">duwalrandr@gmail.com</a>
                 </li>
                 <li>
                   <i className="agrikon-icon-pin"></i>
@@ -86,10 +86,10 @@ const Footer = () => {
       <div className="bottom-footer">
         <div className="container">
           <p>© Copyright 2020 by Company.com</p>
-          <div className="bottom-footer__links">
+          {/* <div className="bottom-footer__links">
             <a href="#">Terms & Conditions</a>
             <a href="#">Privacy Policy</a>
-          </div>
+          </div> */}
         </div>
       </div>
 

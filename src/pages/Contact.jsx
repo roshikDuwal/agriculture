@@ -6,6 +6,8 @@ import "aos/dist/aos.css";
 
 import { useToast } from "@chakra-ui/react";
 
+import { AiFillPhone, AiOutlineMail } from "react-icons/ai";
+
 const Contact = () => {
   const toast = useToast();
 
@@ -151,31 +153,35 @@ const Contact = () => {
                 <div className="contact-infos__single">
                   <h3>About Company</h3>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit nulla
-                    sit amet lectus neque.
+                    Duwal R and R: Innovating Agriculture, Enhancing Efficiency.
                   </p>
                 </div>
               </div>
               <div className="col-sm-12 col-md-12 col-lg-4">
                 <div className="contact-infos__single">
                   <h3>Visit Company</h3>
-                  <p>
-                    66 broklyn golden street line, New York. United States of
-                    America.
-                  </p>
+                  <p>Libali-09,Bhaktapur</p>
                 </div>
               </div>
               <div className="col-sm-12 col-md-12 col-lg-4">
                 <div className="contact-infos__single">
                   <h3>Call or Email</h3>
                   <p>
-                    <a href="mailto:needhelp@company.com">
-                      needhelp@company.com
+                    <a
+                      href="mailto:duwalrandr@gmail.com"
+                      className="flex items-center justify-center gap-1"
+                    >
+                      {" "}
+                      <AiOutlineMail /> duwalrandr@gmail.com
                     </a>
                     <br />
-                    <a href="mailto:info@company.com">info@company.com</a>
-                    <br />
-                    <a href="tel:666-888-0000">666 888 0000</a>
+                    <a
+                      href="tel:01-6613730"
+                      className="flex items-center justify-center gap-1"
+                    >
+                      {" "}
+                      <AiFillPhone /> 01-6613730
+                    </a>
                   </p>
                 </div>
               </div>

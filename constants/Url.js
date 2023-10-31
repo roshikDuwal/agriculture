@@ -1,5 +1,6 @@
-export const domain="https://duwalrnr.ands.com.np/api"
+export const domain="https://v1api.duwalrandr.com.np/api"
 
-export const Image_domain="https://duwalrnr.ands.com.np/uploads/product"
 
-export const Single_product_api="https://duwalrnr.ands.com.np/api/product"
+export const Image_domain="https://v1api.duwalrandr.com.np/uploads/product"
+
+export const Single_product_api="https://v1api.duwalrandr.com.np/api/product"

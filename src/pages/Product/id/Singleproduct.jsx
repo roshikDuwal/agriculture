@@ -44,6 +44,8 @@ const Singleproduct = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  console.log(data);
+
   return (
     <>
       {loading ? (
@@ -100,7 +102,7 @@ const Singleproduct = () => {
                       </div>
 
                       <div className="blog-details__content singledescription">
-                        <p>{data?.data?.products?.description}</p>
+                        <p>{data?.data?.products?.short_description}</p>
                       </div>
                     </div>
                   </div>

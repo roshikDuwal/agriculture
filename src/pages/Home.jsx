@@ -8,12 +8,11 @@ import HomeVideo from "../../video/homevideo.mp4";
 import HighQuality from "../../assets/images/resources/cta-3-1.jpg";
 import BackgroundImage from "../../assets/images/backgrounds/cta-1-bg-1.jpg";
 import ProductDetail from "../../assets/images/resources/blog-cta-1.png";
-import AboutImage from "../../assets/images/icons/about-bg-icon-1-1.png"
-import Infobg from "../../assets/images/backgrounds/cta-1-bg-1.jpg"
+import AboutImage from "../../assets/images/icons/about-bg-icon-1-1.png";
+import Infobg from "../../assets/images/backgrounds/cta-1-bg-1.jpg";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
-
 
 const Home = () => {
   useEffect(() => {
@@ -39,10 +38,16 @@ const Home = () => {
               <div className="col-xl-7 col-lg-12">
                 <span className="tagline">Welcome to Duwal R And R </span>
                 <h2>Agriculture & Eco Farming</h2>
-                <p>
-                  There are many of passages of lorem Ipsum, but the majori have{" "}
-                  <br />
-                  suffered alteration in some form.
+                <p
+                  style={{
+                    lineHeight: "2.5rem",
+                    fontWeight: "900 !important",
+                    fontSize: "1.5rem",
+                  }}
+                >
+                  " कृषि यन्त्रहरूको नवाजटिको आधार। हामी उच्च गुणस्तरको
+                  यन्त्रहरू र अनपेक्षित सेवासँग तपाईंको कृषि अभ्यासलाई
+                  साधारण गर्न यहाँ छौं।"
                 </p>
                 <Link to="/about" className="thm-btn">
                   Discover More
@@ -54,11 +59,7 @@ const Home = () => {
       </div>
 
       <section className="about-one" style={{ paddingTop: "1px !important" }}>
-        <img
-        src={AboutImage}
-          className="about-one__bg-shape-1"
-          alt=""
-        />
+        <img src={AboutImage} className="about-one__bg-shape-1" alt="" />
         <div className="container">
           <div className="row">
             <div className="col-lg-12" style={{ margin: "0px !important" }}>
@@ -112,9 +113,13 @@ const Home = () => {
                 <div className="blog-home__slogan-content">
                   <h3>We Care About Our Agriculture Growth</h3>
                   <p className="block-text">
-                    There are many variations of passages of Lorem Ipsum
-                    available, but the majority have suffered in some form, by
-                    injected humour words.
+                    "Here at Duwal R and R, agriculture is our passion. We
+                    deeply care about the farming community, striving to provide
+                    top-quality machinery that revolutionizes agricultural
+                    practices. Our commitment extends beyond machines; we're
+                    dedicated to empowering farmers with reliable equipment,
+                    ensuring efficiency, productivity, and a sustainable future
+                    for agriculture."
                   </p>
                 </div>
               </div>
@@ -156,9 +161,9 @@ const Home = () => {
             <div className="col-lg-7">
               <div className="call-to-action__three-content">
                 <h3>Providing High Quality Products</h3>
-                <a href="about.html" className="thm-btn">
+                <Link to="/products" className="thm-btn">
                   Discover More
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -182,12 +187,16 @@ const Home = () => {
         <div className="container">
           <div className="call-to-action__content">
             <i className="call-to-action__icon agrikon-icon-agriculture-2"></i>
-            <h3>We’re popular leader in agriculture market globally</h3>
+            <h3>
+              {" "}
+              We’re popular leader in agriculture market in all over Nepal for
+              machinery and tools
+            </h3>
           </div>
           <div className="call-to-action__button">
-            <a href="services.html" className="thm-btn">
+            <Link to="/products" className="thm-btn">
               Discover More
-            </a>
+            </Link>
           </div>
         </div>
       </section>

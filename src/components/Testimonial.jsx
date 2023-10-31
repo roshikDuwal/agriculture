@@ -34,6 +34,8 @@ const Testimonial = () => {
 
 
 
+
+
   return (
     <>
       <section className="testimonials-one">
@@ -63,7 +65,7 @@ const Testimonial = () => {
                           ))}
                         </div>
 
-                        <p>{elem.description}</p>
+                        <p>{elem.description.replace(/(<([^>]+)>)/gi,"").replace(/&amp;/g, '&')}</p>
                       </div>
                     </div>
                   </div>
@@ -99,10 +101,6 @@ const Testimonial = () => {
                     </div>
                   </div>
 
-                  <div
-                    className="swiper-pagination"
-                    id="testimonials-one__swiper-pagination"
-                  ></div>
                 </div>
               </SwiperSlide>
             );

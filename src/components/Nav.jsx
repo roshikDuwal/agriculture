@@ -54,7 +54,7 @@ const Nav = () => {
 
             <div className="topbar__right">
               <a href="#">
-                <i className="agrikon-icon-email"></i>duwalR&R@company.com
+                <i className="agrikon-icon-email"></i><a href="mailto:duwalrandr@gmail.com">duwalrandr@gmail.com</a> 
               </a>
               <a href="#">
                 <i className="agrikon-icon-clock"></i>Sun - Fri 8:00 - 6:30,
@@ -107,14 +107,14 @@ const Nav = () => {
                 ></i>
               </a> */}
 
-              <a href="tel:92-666-888-0000" className="main-header__info-phone">
+              <a href="tel:01-6613730" className="main-header__info-phone">
                 <i className="agrikon-icon-phone-call"></i>
                 <span className="main-header__info-phone-content">
                   <span className="main-header__info-phone-text">
                     Call Anytime
                   </span>
                   <span className="main-header__info-phone-title">
-                    92 666 888 0000
+                    01-6613730
                   </span>
                 </span>
               </a>

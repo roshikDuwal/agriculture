@@ -13,7 +13,7 @@ import { FreeMode, Pagination, Autoplay } from "swiper/modules";
 import { getProductData } from "../pages/Product/api/useGetProduct";
 import { Image_domain } from "../../constants/Url";
 import { Link } from "react-router-dom";
-import { Flex } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 
 const Productlist = () => {
   const [data, setData] = useState([]);
@@ -34,7 +34,7 @@ const Productlist = () => {
   const customBreakpoints = {
     0: {
       slidesPerView: 1,
-      spaceBetween: 10, 
+      spaceBetween: 10,
     },
 
     650: {
@@ -55,26 +55,6 @@ const Productlist = () => {
       spaceBetween: 10, //
     },
   };
-
-  // const responsive = {
-  //   superLargeDesktop: {
-  //     // the naming can be any, depends on you.
-  //     breakpoint: { max: 4000, min: 3000 },
-  //     items: 5,
-  //   },
-  //   desktop: {
-  //     breakpoint: { max: 3000, min: 1024 },
-  //     items: 3,
-  //   },
-  //   tablet: {
-  //     breakpoint: { max: 1024, min: 464 },
-  //     items: 2,
-  //   },
-  //   mobile: {
-  //     breakpoint: { max: 464, min: 0 },
-  //     items: 1,
-  //   },
-  // };
 
   return (
     <>
@@ -101,14 +81,24 @@ const Productlist = () => {
               </div>
               <div className="col-lg-6">
                 <p className="block-text">
-                  Lorem ipsum is simply free text available. Aenean eu leo quam.
-                  Pellentesque ornare sem lacinia quam venenatis vestibulum.
-                  Aenean lacinia bibendum nulla sed consectetur.
+                  At Duwal R and R, our diverse range of agricultural machinery
+                  includes powerful and efficient tractors, reliable and
+                  user-friendly harvesters ensuring timely crop harvesting,
+                  plows designed to shape and cultivate land for optimal
+                  fertility, effective sprayers equipped to control crop
+                  diseases and pests with precision, and planters with tailored
+                  mechanisms for precise and efficient crop planting. Each of
+                  our products is carefully selected to enhance farming
+                  operations, offering durability, performance, and ease of use
+                  to meet the diverse needs of modern agriculture."
                 </p>
               </div>
             </div>
 
-            <div className="row" style={{ paddingLeft: "15px",marginTop:"15px"}}>
+            <div
+              className="row"
+              style={{ paddingLeft: "15px", marginTop: "15px" }}
+            >
               <Swiper
                 freeMode={true}
                 autoplay={{
@@ -120,58 +110,75 @@ const Productlist = () => {
                 }}
                 breakpoints={customBreakpoints}
                 modules={[FreeMode, Pagination, Autoplay]}
-                
               >
-                {data?.data?.products.map((elem, index) => {
-                  return (
-                    <SwiperSlide key={elem.slug} style={{display:"flex",alignItems:"center",justifyContent:"center" }}>
-                      <div className="blog-card">
-                        <div
-                          className="blog-card__image"
-                          style={{ height: "60%" }}
-                        >
-                          <img
-                            style={{ objectFit: "contain", height: "100%" }}
-                            src={`${Image_domain}/${elem.image}`}
-                            alt="Best Way to Do Eco and Agriculture"
-                          />
-                        </div>
-
-                        <div
-                          className="blog-card__content"
-                          style={{
-                            height: "40%",
-                            width: "100%",
-                          }}
-                        >
-                          <div className="blog-card__meta">
-                            <a href="#">
-                              <i className="far fa-user-circle"></i>
-                              {elem.categories[0].title}
-                            </a>
+                {data?.data?.products.length === 0 ? (
+                  <>
+                    <Box width="100%" height="5rem" align="center">
+                      {" "}
+                      <h1 style={{ fontSize: "2rem", fontWeight: "700" }}>
+                        Product Not Found !!
+                      </h1>
+                    </Box>
+                  </>
+                ) : (
+                  data?.data?.products.map((elem, index) => {
+                    return (
+                      <SwiperSlide
+                        key={elem.slug}
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <div className="blog-card">
+                          <div
+                            className="blog-card__image"
+                            style={{ height: "60%" }}
+                          >
+                            <img
+                              style={{ objectFit: "contain", height: "100%" }}
+                              src={`${Image_domain}/${elem.image}`}
+                              alt="Best Way to Do Eco and Agriculture"
+                            />
                           </div>
 
-                          <div>
-                            <h3>
-                              <Link to={`/product/${elem.slug}`}>
-                                {elem.name}
+                          <div
+                            className="blog-card__content"
+                            style={{
+                              height: "40%",
+                              width: "100%",
+                            }}
+                          >
+                            <div className="blog-card__meta">
+                              <a href="#">
+                                <i className="far fa-user-circle"></i>
+                                {elem.categories[0].title}
+                              </a>
+                            </div>
+
+                            <div>
+                              <h3>
+                                <Link to={`/product/${elem.slug}`}>
+                                  {elem.name}
+                                </Link>
+                              </h3>
+                            </div>
+
+                            <Flex width="100%" align="center">
+                              <Link
+                                to={`/product/${elem.slug}`}
+                                className="thm-btn1"
+                              >
+                                Read More
                               </Link>
-                            </h3>
+                            </Flex>
                           </div>
-
-                          <Flex width="100%" align="center">
-                            <Link
-                              to={`/product/${elem.slug}`}
-                              className="thm-btn1"
-                            >
-                              Read More
-                            </Link>
-                          </Flex>
                         </div>
-                      </div>
-                    </SwiperSlide>
-                  );
-                })}
+                      </SwiperSlide>
+                    );
+                  })
+                )}
               </Swiper>
             </div>
 
