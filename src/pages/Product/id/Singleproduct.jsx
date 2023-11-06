@@ -113,12 +113,7 @@ const Singleproduct = () => {
                     <div className="blog-details__tags">
                       <span>DETAILS</span>
                     </div>
-{/* 
-                    <div className="blog-details__social">
-                      <a href="#">
-                        <i className="fab fa-facebook-f"></i>
-                      </a>
-                    </div> */}
+
                   </div>
 
                   <div className="blog-detail">
@@ -142,10 +137,11 @@ const Singleproduct = () => {
                                 <Th>SPECIFICATION</Th>
                               </Tr>
                             </Thead>
+
                             <Tbody>
                               {data?.data?.products?.features.map((elem,index) => {
                                 return (
-                                  <Tr key={index}>
+                                  <Tr key={index} style={{fontSize:"14px"}}>
                                     <Td>{index+1}</Td>
                                     <Td>{elem.parameters}</Td>
                                     <Td>{elem.specifications}</Td>
@@ -153,6 +149,7 @@ const Singleproduct = () => {
                                 );
                               })}
                             </Tbody>
+
                           </Table>
                         </TableContainer>
                       </Flex>

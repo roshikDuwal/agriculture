@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
 import AboutImage from "../images/About.jpg";
@@ -16,6 +16,27 @@ const About = () => {
     AOS.init({ duration: 1000 });
     window.scrollTo(0, 0);
   }, []);
+
+  const [showFullText, setShowFullText] = useState(false);
+  const [showFullText1, setShowFullText1] = useState(false);
+
+  const shortText =
+    " Our Rigorous Quality Standards. At Duwal R and R, quality is our cornerstone. We meticulously... ";
+  const fullText =
+    "   Our Rigorous Quality Standards. At Duwal R and R, quality is our cornerstone. We meticulously select and maintain the highest standards in our agricultural machinery,guaranteeing durability, reliability, and top-tier performance in every piece of equipment we offer.";
+
+  const shortText1 =
+    "Revolutionizing Farming Practices for a Sustainable Future.Our commitment... ";
+  const fullText1 =
+    "  Revolutionizing Farming Practices for a Sustainable Future.Our commitment lies in offering innovative solutions and modern techniques that empower farmers.";
+
+  const toggleFullText = () => {
+    setShowFullText(!showFullText);
+  };
+
+  const toggleFullText1 = () => {
+    setShowFullText1(!showFullText1);
+  };
 
   return (
     <>
@@ -77,7 +98,15 @@ const About = () => {
             </div>
           </div>
           <div>
-            <img width={"400px"} style={{boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",borderRadius:"5px"}} src={AboutImage} alt="Jessica Brown" />
+            <img
+              width={"400px"}
+              style={{
+                boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+                borderRadius: "5px",
+              }}
+              src={AboutImage}
+              alt="Jessica Brown"
+            />
           </div>
         </div>
       </section>
@@ -90,7 +119,11 @@ const About = () => {
           <div className="row">
             <div className="col-md-12 col-lg-4">
               <div className="service-one__box">
-                <img style={{height:"250px",objectFit:"cover"}} src={Aboutimage1} alt="" />
+                <img
+                  style={{ height: "250px", objectFit: "cover" }}
+                  src={Aboutimage1}
+                  alt=""
+                />
                 <div className="service-one__box-content">
                   <h3>Agriculture Leader</h3>
                   <p className="block-text" style={{ padding: "0 10px" }}>
@@ -102,28 +135,42 @@ const About = () => {
             </div>
             <div className="col-md-12 col-lg-4">
               <div className="service-one__box">
-                <img style={{height:"250px",objectFit:"cover"}} src={Aboutimage2} alt="" />
+                <img
+                  style={{ height: "250px", objectFit: "cover" }}
+                  src={Aboutimage2}
+                  alt=""
+                />
                 <div className="service-one__box-content">
                   <h3>Quality Standards</h3>
                   <p className="block-text" style={{ padding: "0 10px" }}>
-                    Our Rigorous Quality Standards. At Duwal R and R, quality is
-                    our cornerstone. We meticulously select and maintain the
-                    highest standards in our agricultural machinery,
-                    guaranteeing durability, reliability, and top-tier
-                    performance in every piece of equipment we offer.
+                    {showFullText ? fullText : shortText}{" "}
+                    <button
+                      onClick={toggleFullText}
+                      style={{ border: "1px solid grey !important" }}
+                    >
+                      {showFullText ? "Read Less" : "Read More"}
+                    </button>
                   </p>
                 </div>
               </div>
             </div>
             <div className="col-md-12 col-lg-4">
               <div className="service-one__box">
-                <img style={{height:"250px",objectFit:"cover"}} src={Aboutimage3} alt="" />
+                <img
+                  style={{ height: "250px", objectFit: "cover" }}
+                  src={Aboutimage3}
+                  alt=""
+                />
                 <div className="service-one__box-content">
                   <h3>Sustainable Agriculture Solutions</h3>
                   <p className="block-text" style={{ padding: "0 10px" }}>
-                    Revolutionizing Farming Practices for a Sustainable Future.
-                    Our commitment lies in offering innovative solutions and
-                    modern techniques that empower farmers.
+                    {showFullText1 ? fullText1 : shortText1}{" "}
+                    <button
+                      onClick={toggleFullText1}
+                      style={{ border: "none !important" }}
+                    >
+                      {showFullText1 ? "Read Less" : "Read More"}
+                    </button>
                   </p>
                 </div>
               </div>
@@ -135,17 +182,28 @@ const About = () => {
       <section className="about-three">
         <div className="container">
           <div className="row">
+            
             <div className="col-lg-6">
               <div className="about-three__image">
-                <img style={{width:"300px",boxShadow: "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px"}} src={Experienceimage} alt="" />
+                <img
+                  style={{
+                    width: "300px",
+                    boxShadow:
+                      "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px",
+                  }}
+                  src={Experienceimage}
+                  alt=""
+                />
               </div>
             </div>
+
+
             <div className="col-lg-6">
               <div className="about-three__content">
                 <div className="block-title">
                   <div className="block-title__image"></div>
                   <p>Get to know us</p>
-                  <h3>5 Years Agriculture Experience</h3>
+                  <h3>30 Years Agriculture Experience</h3>
                 </div>
                 <ul className="about-three__list list-unstyled">
                   <li>
@@ -179,6 +237,7 @@ const About = () => {
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
@@ -222,10 +281,7 @@ const About = () => {
           className="container"
           style={{ display: "flex", flexWrap: "wrap" }}
         >
-          <div
-            className="col-md-6 col-lg-6 col-xl-6"
-           
-          >
+          <div className="col-md-6 col-lg-6 col-xl-6">
             <div className="team-one__content">
               <div className="block-title">
                 <div className="block-title__image"></div>
@@ -249,7 +305,6 @@ const About = () => {
               display: "flex",
               flexWrap: "wrap",
               gap: "1rem",
-            
             }}
           >
             <div className="team-card">
