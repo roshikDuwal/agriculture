@@ -469,12 +469,14 @@
   padding-top: 80px;
   padding-bottom: 80px;
   position: relative;
+
 }
 
 @media (min-width: 1200px) {
   .team-one {
     padding-top: 77px;
     padding-bottom: 54px;
+
   }
 }
 
@@ -634,12 +636,25 @@
 
 .team-card {
   text-align: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  height: 18rem;
+  width: 13rem;
+
+  
+
+}
+
+.teamsimage{
+  width: 100% !important;
+
 }
 
 .team-card__image {
   position: relative;
   overflow: hidden;
   border-radius: 5px;
+  width: 100%;
+  height: 70%;
 }
 
 .team-card__image::before {
@@ -760,10 +775,17 @@
 }
 
 .team-one__carousel-wrap {
-  margin-top: 40px;
-  width: 100%;
+  margin-top: 0px;
+
   padding-left: 15px;
   padding-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid red;
+
+
 }
 
 @media (min-width: 1200px) {
@@ -5930,16 +5952,17 @@ h6 {
 
 @media (min-width: 768px) {
   .call-to-action__three-image {
-    max-width: 330px;
+    max-width: 450px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
 }
 
 @media (min-width: 992px) {
   .call-to-action__three-image {
-    top: -130px;
+    top: -50px;
     margin-bottom: -170px;
     margin-left: 0;
     margin-right: 0;
@@ -6057,6 +6080,7 @@ h6 {
   padding-top: 48px;
   padding-bottom: 50px;
   position: relative;
+ 
 }
 
 .service-one::before {
@@ -6096,6 +6120,7 @@ h6 {
 .service-one__box {
   position: relative;
   margin-bottom: 60px;
+ 
 }
 
 @media (min-width: 992px) {
@@ -6119,19 +6144,25 @@ h6 {
 }
 
 .service-one__box-content {
-  width: calc(100% - 40px);
-  position: absolute;
+  width: calc(100% );
+  /* position: absolute; */
   left: 50%;
   bottom: 0;
-  -webkit-transform: translateX(-50%) translateY(50%);
-  transform: translateX(-50%) translateY(50%);
+  /* -webkit-transform: translateX(-50%) translateY(50%);
+  transform: translateX(-50%) translateY(50%) ; */
   background-color: #fff;
-  border-radius: 5px;
+  border: 2px solid rgb(239, 239, 239);
+  border-radius: 0px 0px 5px 5px;
+  
   padding-top: 20px;
   padding-bottom: 20px;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
+
 }
+
+
+
 
 @media (min-width: 1200px) {
   .service-one__box-content {
@@ -6173,6 +6204,7 @@ h6 {
   background-color: #fff;
   margin-top: 0;
   margin-bottom: 0;
+
 }
 
 @media (min-width: 992px) {

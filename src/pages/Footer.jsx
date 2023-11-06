@@ -84,8 +84,8 @@ const Footer = () => {
       </footer>
 
       <div className="bottom-footer">
-        <div className="container">
-          <p>© Copyright 2020 by Company.com</p>
+        <div className="container" style={{alignItems:"center",display:"flex",justifyContent:"center"}}>
+          <p>© Copyright {new Date().getFullYear()} by  <a href="https://www.dotsamsara.com/" target="__blank" style={{textDecoration:"underline"}} >Dot Samsara.com</a>  </p>
           {/* <div className="bottom-footer__links">
             <a href="#">Terms & Conditions</a>
             <a href="#">Privacy Policy</a>

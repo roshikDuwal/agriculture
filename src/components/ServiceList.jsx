@@ -8,8 +8,8 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
-import ServiceImage1 from "../../assets/images/services/service-2-1.jpg";
-import ServiceImage2 from "../../assets/images/services/service-2-1.jpg";
+import ServiceImage1 from "../images/servicethree.jpg";
+import ServiceImage2 from "../images/servicefour.jpg";
 
 const ServiceList = () => {
   return (

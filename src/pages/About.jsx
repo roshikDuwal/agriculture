@@ -1,13 +1,12 @@
 import React, { useEffect } from "react";
 
 import { Link } from "react-router-dom";
-import AboutImage from "../../assets/images/team/team-1-1.jpg";
-import Aboutimage1 from "../../assets/images/services/service-1-1.jpg";
-import Aboutimage2 from "../../assets/images/services/service-1-2.jpg";
-import Aboutimage3 from "../../assets/images/services/service-1-3.jpg";
-import Experienceimage from "../../assets/images/resources/about-3-2.jpg";
+import AboutImage from "../images/About.jpg";
+import Aboutimage1 from "../images/IMG.jpg";
+import Aboutimage2 from "../images/abouttwo.jpg";
+import Aboutimage3 from "../images/servicefour.jpg";
+import Experienceimage from "../images/aboutfour.jpg";
 import BACKGROUNDIMAGE from "../../assets/images/backgrounds/cta-1-bg-1.jpg";
-import Mystyle from "../../assets/images/backgrounds/page-header-bg-1-1.jpg";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -21,9 +20,7 @@ const About = () => {
   return (
     <>
       <section className="page-header">
-        <div className="page-header__bg">
-          <img src={Mystyle} alt="" />
-        </div>
+        <div className="page-header__bg"></div>
 
         <div className="container">
           <ul className="thm-breadcrumb list-unstyled">
@@ -80,59 +77,53 @@ const About = () => {
             </div>
           </div>
           <div>
-            <img src={AboutImage} alt="Jessica Brown" />
+            <img width={"400px"} style={{boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",borderRadius:"5px"}} src={AboutImage} alt="Jessica Brown" />
           </div>
         </div>
       </section>
 
-      <section className="service-one service-one__about">
-        <div className="container">
+      <section
+        className="service-one service-one__about"
+        style={{ padding: "0 20px" }}
+      >
+        <div>
           <div className="row">
             <div className="col-md-12 col-lg-4">
               <div className="service-one__box">
-                <img src={Aboutimage1} alt="" />
+                <img style={{height:"250px",objectFit:"cover"}} src={Aboutimage1} alt="" />
                 <div className="service-one__box-content">
                   <h3>Agriculture Leader</h3>
-                  <p>
+                  <p className="block-text" style={{ padding: "0 10px" }}>
                     Guiding the Future of Agriculture with Innovative Solutions
-                    and Expertise. At the forefront of the industry, we champion
-                    advancements and sustainable practices, providing a diverse
-                    range of cutting-edge machinery to bolster productivity and
-                    efficiency in modern farming.
+                    and Expertise.
                   </p>
                 </div>
               </div>
             </div>
             <div className="col-md-12 col-lg-4">
               <div className="service-one__box">
-                <img src={Aboutimage2} alt="" />
-                <div className="service-one__box-content" >
+                <img style={{height:"250px",objectFit:"cover"}} src={Aboutimage2} alt="" />
+                <div className="service-one__box-content">
                   <h3>Quality Standards</h3>
-                  <p>
-                    Ensuring Excellence in Every Detail: Our Rigorous Quality
-                    Standards. At Duwal R and R, quality is our cornerstone. We
-                    meticulously select and maintain the highest standards in
-                    our agricultural machinery, guaranteeing durability,
-                    reliability, and top-tier performance in every piece of
-                    equipment we offer. Our commitment to quality assurance is
-                    unwavering, reflecting our dedication to serving the
-                    agricultural community with the best-in-class machinery.
+                  <p className="block-text" style={{ padding: "0 10px" }}>
+                    Our Rigorous Quality Standards. At Duwal R and R, quality is
+                    our cornerstone. We meticulously select and maintain the
+                    highest standards in our agricultural machinery,
+                    guaranteeing durability, reliability, and top-tier
+                    performance in every piece of equipment we offer.
                   </p>
                 </div>
               </div>
             </div>
             <div className="col-md-12 col-lg-4">
               <div className="service-one__box">
-                <img src={Aboutimage3} alt="" />
+                <img style={{height:"250px",objectFit:"cover"}} src={Aboutimage3} alt="" />
                 <div className="service-one__box-content">
                   <h3>Sustainable Agriculture Solutions</h3>
-                  <p>
+                  <p className="block-text" style={{ padding: "0 10px" }}>
                     Revolutionizing Farming Practices for a Sustainable Future.
                     Our commitment lies in offering innovative solutions and
-                    modern techniques that empower farmers, ensuring
-                    productivity while preserving the environment. We strive to
-                    provide tools and strategies that support a balanced,
-                    sustainable approach to agriculture.
+                    modern techniques that empower farmers.
                   </p>
                 </div>
               </div>
@@ -146,7 +137,7 @@ const About = () => {
           <div className="row">
             <div className="col-lg-6">
               <div className="about-three__image">
-                <img src={Experienceimage} alt="" />
+                <img style={{width:"300px",boxShadow: "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px"}} src={Experienceimage} alt="" />
               </div>
             </div>
             <div className="col-lg-6">
@@ -216,6 +207,96 @@ const About = () => {
               {" "}
               Discover More
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="team-one">
+        <img
+          src="assets/images/icons/team-bg-1-1.png"
+          alt=""
+          className="team-one__bg"
+        />
+
+        <div
+          className="container"
+          style={{ display: "flex", flexWrap: "wrap" }}
+        >
+          <div
+            className="col-md-6 col-lg-6 col-xl-6"
+           
+          >
+            <div className="team-one__content">
+              <div className="block-title">
+                <div className="block-title__image"></div>
+                <p>meet the team</p>
+                <h3>Expert Farmers</h3>
+              </div>
+              <div className="team-one__summery">
+                <p className="block-text">
+                  Lorem ipsum is simply free text available. Aenean eu leo quam.
+                  Pellentesque ornare sem lacinia quam venenatis vestibulum.
+                  Aenean lacinia bibendum.
+                </p>
+              </div>
+              <div className="team-one__nav"></div>
+            </div>
+          </div>
+
+          <div
+            className="col-md-6 col-lg-6 col-xl-6"
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "1rem",
+            
+            }}
+          >
+            <div className="team-card">
+              <div className="team-card__image">
+                <img
+                  className="teamsimage"
+                  src="assets/images/team/team-1-1.jpg"
+                  alt="Jessica Brown"
+                />
+                <div className="team-card__social">
+                  <a href="#">
+                    <i className="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#">
+                    <i className="fab fa-twitter"></i>
+                  </a>
+                  <a href="#">
+                    <i className="fab fa-linkedin-in"></i>
+                  </a>
+                </div>
+              </div>
+              <h3>Jessica Brown</h3>
+              <p>Farmer</p>
+            </div>
+
+            <div className="team-card">
+              <div className="team-card__image">
+                <img
+                  className="teamsimage"
+                  src="assets/images/team/team-1-1.jpg"
+                  alt="Jessica Brown"
+                />
+                <div className="team-card__social">
+                  <a href="#">
+                    <i className="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#">
+                    <i className="fab fa-twitter"></i>
+                  </a>
+                  <a href="#">
+                    <i className="fab fa-linkedin-in"></i>
+                  </a>
+                </div>
+              </div>
+              <h3>Jessica Brown</h3>
+              <p>Farmer</p>
+            </div>
           </div>
         </div>
       </section>

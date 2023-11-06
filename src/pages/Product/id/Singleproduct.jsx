@@ -12,13 +12,12 @@ import {
   Table,
   Thead,
   Tbody,
-  Tfoot,
   Tr,
   Th,
   Td,
-  TableCaption,
   TableContainer,
 } from "@chakra-ui/react";
+import HTMLReactParser from "html-react-parser";
 
 const Singleproduct = () => {
   const { id } = useParams();
@@ -44,21 +43,21 @@ const Singleproduct = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  console.log(data);
+
 
   return (
     <>
       {loading ? (
         <>
-               <Flex width="100%"  height="70vh" align="center" justify="center">
-                  {" "}
-                  <Spinner
-                    thickness="6px"
-                    speed="0.65s"
-                    emptyColor="gray.200"
-                    size="xl"
-                  />
-                </Flex>
+          <Flex width="100%" height="70vh" align="center" justify="center">
+            {" "}
+            <Spinner
+              thickness="6px"
+              speed="0.65s"
+              emptyColor="gray.200"
+              size="xl"
+            />
+          </Flex>
         </>
       ) : (
         <>
@@ -80,6 +79,7 @@ const Singleproduct = () => {
                           src={`${Image_domain}/${data?.data?.products?.image}`}
                           className="img-fluid"
                           alt=""
+                          width="50%"
                         />
                       </div>
                     </div>
@@ -102,7 +102,9 @@ const Singleproduct = () => {
                       </div>
 
                       <div className="blog-details__content singledescription">
-                        <p>{data?.data?.products?.short_description}</p>
+                        <p>
+                          {HTMLReactParser(data?.data?.products?.description)}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -111,12 +113,12 @@ const Singleproduct = () => {
                     <div className="blog-details__tags">
                       <span>DETAILS</span>
                     </div>
-
+{/* 
                     <div className="blog-details__social">
                       <a href="#">
                         <i className="fab fa-facebook-f"></i>
                       </a>
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="blog-detail">
@@ -141,16 +143,15 @@ const Singleproduct = () => {
                               </Tr>
                             </Thead>
                             <Tbody>
-                              <Tr>
-                                <Td>1</Td>
-                                <Td>BRAND</Td>
-                                <Td>BKT KISAN</Td>
-                              </Tr>
-                              <Tr>
-                                <Td>2</Td>
-                                <Td>Model</Td>
-                                <Td>Belt type model</Td>
-                              </Tr>
+                              {data?.data?.products?.features.map((elem,index) => {
+                                return (
+                                  <Tr key={index}>
+                                    <Td>{index+1}</Td>
+                                    <Td>{elem.parameters}</Td>
+                                    <Td>{elem.specifications}</Td>
+                                  </Tr>
+                                );
+                              })}
                             </Tbody>
                           </Table>
                         </TableContainer>

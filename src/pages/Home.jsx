@@ -5,7 +5,7 @@ import ServiceList from "../components/ServiceList";
 import { Link } from "react-router-dom";
 import "../css/video.scss";
 import HomeVideo from "../../video/homevideo.mp4";
-import HighQuality from "../../assets/images/resources/cta-3-1.jpg";
+import HighQuality from "../images/IMG.jpg";
 import BackgroundImage from "../../assets/images/backgrounds/cta-1-bg-1.jpg";
 import ProductDetail from "../../assets/images/resources/blog-cta-1.png";
 import AboutImage from "../../assets/images/icons/about-bg-icon-1-1.png";
@@ -82,16 +82,6 @@ const Home = () => {
                   </p>
                 </div>
 
-                <div className="about-one__icon-row">
-                  <div className="row">
-                    <div className="col-lg-6">
-                      <div className="about-one__box">
-                        <i className="agrikon-icon-farmer"></i>
-                        <h4>Professional Farmers</h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
 
                 <Link to="/about" className="thm-btn">
                   Discover More
@@ -153,14 +143,14 @@ const Home = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-5 wow fadeInLeft" data-wow-duration="1500ms">
-              <div className="call-to-action__three-image">
-                <img src={HighQuality} alt="" />
+              <div className="call-to-action__three-image" >
+                <img style={{height:"20%",width:"100%"}} src={HighQuality} alt="" />
               </div>
             </div>
 
             <div className="col-lg-7">
               <div className="call-to-action__three-content">
-                <h3>Providing High Quality Products</h3>
+                <h3>Providing High Quality Machinary</h3>
                 <Link to="/products" className="thm-btn">
                   Discover More
                 </Link>
