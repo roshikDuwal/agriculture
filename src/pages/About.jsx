@@ -270,7 +270,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="team-one">
+      {/* <section className="team-one">
         <img
           src="assets/images/icons/team-bg-1-1.png"
           alt=""
@@ -354,7 +354,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };

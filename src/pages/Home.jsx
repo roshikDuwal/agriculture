@@ -71,7 +71,7 @@ const Home = () => {
                   <h3>Better Agriculture for Better Future</h3>
                 </div>
                 <div className="about-one__tagline">
-                  <p>We have 20 years of experience</p>
+                  <p>We have 30 years of experience</p>
                 </div>
 
                 <div className="about-one__summery">
