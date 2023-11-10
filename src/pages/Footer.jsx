@@ -1,6 +1,7 @@
 import React from "react";
 import footerimage1 from "../../assets/images/logo-light.png";
 import { Link } from "react-router-dom";
+import { Box, Flex } from "@chakra-ui/react";
 
 const Footer = () => {
   return (
@@ -9,14 +10,14 @@ const Footer = () => {
         <i className="fa fa-angle-up"></i>
       </a>
 
-      <footer className="site-footer">
+      <footer className="site-footer" >
         
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12 col-md-6 col-lg-6 col-xl-5">
-              <div className="footer-widget">
+        <div className="container" >
+          <Flex flexWrap={'wrap'} >
+            <Box flex={1} className=" footerbox">
+              <div className="footer-widget " class>
                 <a href="index.html" className="footer-widget__Logo">
-                  <img src={footerimage1} width="153" alt="" />
+                  <img src={footerimage1} width="153" alt="" style={{paddingBottom:"2rem"}} />
                 </a>
                 <p>
                   "Thank you for being a vital part of our farming
@@ -33,9 +34,9 @@ const Footer = () => {
                   <a href="#" className="fab fa-instagram"></a>
                 </div>
               </div>
-            </div>
+            </Box>
 
-            <div className="col-sm-12 col-md-6 col-lg-6 col-xl-2">
+            <Box flex={1} className=" footerbox" >
               <div className="footer-widget footer-widget__links-widget">
                 <h3 className="footer-widget__title">Links</h3>
 
@@ -57,11 +58,10 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-            </div>
+            </Box>
 
-           
-
-            <div className="col-sm-12 col-md-6 col-lg-6 col-xl-5">
+        
+            <Box flex={1} className=" footerbox" >
               <h3 className="footer-widget__title">Contact</h3>
 
               <ul className="list-unstyled footer-widget__contact">
@@ -78,8 +78,8 @@ const Footer = () => {
                   <a href="#">Libali,Bhaktapur</a>
                 </li>
               </ul>
-            </div>
-          </div>
+            </Box>
+          </Flex>
         </div>
       </footer>
 

@@ -166,7 +166,7 @@ const Home = () => {
         className="call-to-action jarallax"
         data-jarallax
         data-speed="0.3"
-        style={{ marginTop: "20rem" }}
+    
       >
         <img
           className="call-to-action__bg jarallax-img"

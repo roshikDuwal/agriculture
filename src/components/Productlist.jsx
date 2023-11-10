@@ -86,11 +86,7 @@ const Productlist = () => {
                   user-friendly harvesters ensuring timely crop harvesting,
                   plows designed to shape and cultivate land for optimal
                   fertility, effective sprayers equipped to control crop
-                  diseases and pests with precision, and planters with tailored
-                  mechanisms for precise and efficient crop planting. Each of
-                  our products is carefully selected to enhance farming
-                  operations, offering durability, performance, and ease of use
-                  to meet the diverse needs of modern agriculture."
+                  diseases and pests with precision."
                 </p>
               </div>
             </div>

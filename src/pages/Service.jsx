@@ -70,8 +70,8 @@ const Service = () => {
               </div>
             </div>
             <div className="col-lg-6">
-              <div className="feature-one__image" style={{display:'flex',justifyContent:"flex-end"}}>
-                <img style={{width:"300px",marginRight:"10rem",boxShadow: "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px"}} src={Serviceimage} alt="" />
+              <div className="feature-one__image" style={{display:'flex',justifyContent:"center",alignItems:"center"}}>
+                <img style={{width:"300px",boxShadow: "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px"}} src={Serviceimage} alt="" />
               </div>
             </div>
           </div>

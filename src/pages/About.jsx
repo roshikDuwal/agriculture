@@ -155,7 +155,7 @@ const About = () => {
               </div>
             </div>
             <div className="col-md-12 col-lg-4">
-              <div className="service-one__box">
+              <div className="service-one__box" >
                 <img
                   style={{ height: "250px", objectFit: "cover" }}
                   src={Aboutimage3}
@@ -184,7 +184,7 @@ const About = () => {
           <div className="row">
             
             <div className="col-lg-6">
-              <div className="about-three__image">
+              <div className="about-three__image"style={{display:'flex',alignItems:"center",justifyContent:"center"}}>
                 <img
                   style={{
                     width: "300px",
