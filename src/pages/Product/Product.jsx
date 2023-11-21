@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { getProductData } from "./api/useGetProduct";
+import { getAllProductData } from "./api/useGetProduct";
 import { Link } from "react-router-dom";
 import "../../../assets/css/main.css";
 import { Box, Flex, Spinner } from "@chakra-ui/react";
 import { Image_domain } from "../../../constants/Url";
 
 const Product = () => {
+
   const myStyle = {
     backgroundImage: "url('assets/images/backgrounds/page-header-bg-1-1.jpg')",
   };
@@ -19,7 +20,7 @@ const Product = () => {
   const getproductdata = async () => {
     setLoading(true);
     try {
-      const getdata = await getProductData();
+      const getdata = await  getAllProductData();
       setData(getdata);
       setLoading(false);
     } catch (error) {
@@ -33,6 +34,8 @@ const Product = () => {
     AOS.init({ duration: 1000 });
     window.scrollTo(0, 0);
   }, []);
+
+  console.log("data",data);
 
   return (
     <>

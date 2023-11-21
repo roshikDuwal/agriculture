@@ -7752,14 +7752,14 @@ h6 {
 .testimonials-one {
   background-color: #1f4e3d;
   position: relative;
-  padding-top: 70px;
-  padding-bottom: 140px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 @media (min-width: 992px) {
   .testimonials-one {
-    padding-top: 50px;
-    padding-bottom: 70px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
@@ -7868,12 +7868,12 @@ h6 {
 }
 
 #testimonials-one__carousel .testimonials-one__icons {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 @media (min-width: 1200px) {
   #testimonials-one__carousel .testimonials-one__icons {
-    margin-bottom: 35px;
+    margin-bottom: 5px;
   }
 }
 

@@ -50,10 +50,11 @@ const Testimonial = () => {
           {data?.data?.testimonial?.map((elem, index) => {
             return (
               <SwiperSlide key={elem.id}>
-                <div className="container">
-                  <h2 className="testimonials-one__title">Testimonials</h2>
+                <div className="container" style={{marginBottom:"25px"}} >
+
 
                   <div
+                
                     id="testimonials-one__carousel"
                     className="testimonials-one__carousel swiper-container"
                   >
@@ -65,9 +66,10 @@ const Testimonial = () => {
                           ))}
                         </div>
 
-                        <p>{elem.description.replace(/(<([^>]+)>)/gi,"").replace(/&amp;/g, '&')}</p>
+                        <p style={{fontSize:"20px"}}>{elem.description.replace(/(<([^>]+)>)/gi,"").replace(/&amp;/g, '&')}</p>
                       </div>
                     </div>
+
                   </div>
 
                   <div className="swiper-container">

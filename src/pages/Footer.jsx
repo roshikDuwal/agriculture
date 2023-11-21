@@ -15,10 +15,10 @@ const Footer = () => {
         <div className="container" >
           <Flex flexWrap={'wrap'} >
             <Box flex={1} className=" footerbox">
-              <div className="footer-widget " class>
-                <a href="index.html" className="footer-widget__Logo">
+              <div className="footer-widget " >
+                {/* <a href="index.html" className="footer-widget__Logo">
                   <img src={footerimage1} width="153" alt="" style={{paddingBottom:"2rem"}} />
-                </a>
+                </a> */}
                 <p>
                   "Thank you for being a vital part of our farming
                   community—your trust fuels our commitment to cultivating a
@@ -29,8 +29,7 @@ const Footer = () => {
 
                 <div className="footer__social" style={{ paddingTop: "2rem" }}>
                   <a href="https://www.facebook.com/profile.php?id=100041323845763" target="__blank" className="fab fa-facebook-square"></a>
-                  <a href="#" className="fab fa-twitter"></a>
-                  <a href="#" className="fab fa-pinterest-p"></a>
+                
                   <a href="#" className="fab fa-instagram"></a>
                 </div>
               </div>

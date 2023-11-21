@@ -43,9 +43,8 @@ const Nav = () => {
           <div className="container">
             <div className="topbar__left">
               <div className="topbar__social">
-                <a href="#" className="fab fa-facebook-square"></a>
-                <a href="#" className="fab fa-twitter"></a>
-                <a href="#" className="fab fa-pinterest-p"></a>
+                <a href="https://www.facebook.com/profile.php?id=100041323845763" target="__blank"  className="fab fa-facebook-square"></a>
+             
                 <a href="#" className="fab fa-instagram"></a>
               </div>
 
@@ -57,8 +56,8 @@ const Nav = () => {
                 <i className="agrikon-icon-email"></i><a href="mailto:duwalrandr@gmail.com">duwalrandr@gmail.com</a> 
               </a>
               <a href="#">
-                <i className="agrikon-icon-clock"></i>Sun - Fri 8:00 - 6:30,
-                Saturday - CLOSED
+                <i className="agrikon-icon-clock"></i>Sun - Fri 8:00 am - 6:30 pm,
+                Saturday - 8:30 am - 2:00 pm
               </a>
             </div>
           </div>
