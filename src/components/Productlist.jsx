@@ -14,6 +14,7 @@ import { getProductData } from "../pages/Product/api/useGetProduct";
 import { Image_domain } from "../../constants/Url";
 import { Link } from "react-router-dom";
 import { Box, Flex } from "@chakra-ui/react";
+import HomeImage from "../../assets/images/icons/home-1-blog-bg.png"
 
 const Productlist = () => {
   const [data, setData] = useState([]);
@@ -63,7 +64,7 @@ const Productlist = () => {
         style={{ marginTop: "1rem", padding: "0 2rem" }}
       >
         <img
-          src="assets/images/icons/home-1-blog-bg.png"
+          src={HomeImage}
           alt=""
           className="home-one__boxed-bg"
         />

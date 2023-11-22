@@ -1,5 +1,5 @@
 import React from "react";
-import footerimage1 from "../../assets/images/logo-light.png";
+import footerimage1 from "../images/Whitelogo.png";
 import { Link } from "react-router-dom";
 import { Box, Flex } from "@chakra-ui/react";
 
@@ -16,9 +16,9 @@ const Footer = () => {
           <Flex flexWrap={'wrap'} >
             <Box flex={1} className=" footerbox">
               <div className="footer-widget " >
-                {/* <a href="index.html" className="footer-widget__Logo">
-                  <img src={footerimage1} width="153" alt="" style={{paddingBottom:"2rem"}} />
-                </a> */}
+                <a href="index.html" className="footer-widget__Logo">
+                  <img src={footerimage1} width="123" alt=""  />
+                </a>
                 <p>
                   "Thank you for being a vital part of our farming
                   community—your trust fuels our commitment to cultivating a
@@ -83,12 +83,11 @@ const Footer = () => {
       </footer>
 
       <div className="bottom-footer">
-        <div className="container" style={{alignItems:"center",display:"flex",justifyContent:"center"}}>
-          <p>© Copyright {new Date().getFullYear()} by  <a href="https://www.dotsamsara.com/" target="__blank" style={{textDecoration:"underline"}} >Dot Samsara.com</a>  </p>
-          {/* <div className="bottom-footer__links">
-            <a href="#">Terms & Conditions</a>
-            <a href="#">Privacy Policy</a>
-          </div> */}
+        <div className="container" style={{alignItems:"center",display:"flex",justifyContent:"space-around",gap:"1rem"}}>
+          <p>© Copyright @ Duwal RandR Pvt Ltd {new Date().getFullYear()}  </p>
+
+          <p>Created by  <a href="https://www.dotsamsara.com/" target="__blank" style={{textDecoration:"underline"}} >Dot Samsara</a>  </p>
+     
         </div>
       </div>
 

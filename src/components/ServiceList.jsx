@@ -10,6 +10,7 @@ import {
 import React from "react";
 import ServiceImage1 from "../images/servicethree.jpg";
 import ServiceImage2 from "../images/servicefour.jpg";
+import ServiceImage3 from "../images/serviceimage.png";
 
 const ServiceList = () => {
   return (
@@ -24,6 +25,7 @@ const ServiceList = () => {
             <p>Our Services list</p>
             <h3>What We’re Offering</h3>
           </div>
+
           <div className="row">
             <Flex
               wrap="wrap"
@@ -37,6 +39,7 @@ const ServiceList = () => {
                   <Box className="service-two__card-image" height="40%">
                     <Image src={ServiceImage1} alt="" />
                   </Box>
+
                   <Flex
                     height="60%"
                     direction="column"
@@ -76,6 +79,28 @@ const ServiceList = () => {
                       "We specialize in expert machine repair, restoring your
                       equipment to peak performance and minimizing disruptions
                       to your operations."
+                    </p>
+                  </Flex>
+                </CardBody>
+              </Card>
+            </Flex>
+
+            <Flex align={"center"} justify={"center"} width={"100%"}>
+              <Card className="service-two__card" width="40rem" mb={5} mt={5}>
+                <CardBody p={0}>
+                  <Box className="service-two__card-image" height="20rem">
+                    <Image src={ServiceImage3} alt="" />
+                  </Box>
+
+                  <Flex
+                    direction="column"
+                    className="service-two__card-content"
+                  >
+                    <h3 style={{ width: "100% !important" }}>सहजीकरण</h3>
+                    <p>
+                      बिग्रेको ठौमा आएर बनाउने साथसाथै, ३० वर्षको योग्यता भएको
+                      तकनीशियन द्वारा मर्मत तथा फोनबाटै सानो तीनो समस्याहरू हल
+                      गराउने सुबिधाहरू प्राप्त गर्न सक्छौ।
                     </p>
                   </Flex>
                 </CardBody>

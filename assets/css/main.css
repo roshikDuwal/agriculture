@@ -5751,7 +5751,7 @@ h6 {
 
 .call-to-action h3 {
   font-family: var(--special-font);
-  font-size: 32px;
+  font-size: 12px;
   font-weight: bold;
   color: #fff;
 }
@@ -5764,7 +5764,7 @@ h6 {
 
 @media (min-width: 1200px) {
   .call-to-action h3 {
-    font-size: 40px;
+    font-size: 24px;
   }
 }
 

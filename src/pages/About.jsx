@@ -257,8 +257,7 @@ const About = () => {
           <div className="call-to-action__content">
             <i className="call-to-action__icon agrikon-icon-agriculture-2"></i>
             <h3>
-              We’re popular leader in agriculture market in all over Nepal for
-              machinery and tools
+            गुणस्तरीय कृषि औजार तथा यान्त्रिक उपलब्धि गराउने साथै ग्राहकको समस्या समाधानको लागि सहजीकरण|
             </h3>
           </div>
           <div className="call-to-action__button">
