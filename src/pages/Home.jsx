@@ -150,7 +150,7 @@ const Home = () => {
 
             <div className="col-lg-7">
               <div className="call-to-action__three-content">
-                <h3>Providing High Quality Machinary</h3>
+                <h3>Providing High Quality Machinery</h3>
                 <Link to="/products" className="thm-btn">
                   Discover More
                 </Link>

@@ -43,8 +43,6 @@ const Singleproduct = () => {
     window.scrollTo(0, 0);
   }, []);
 
-
-
   return (
     <>
       {loading ? (
@@ -108,53 +106,64 @@ const Singleproduct = () => {
                       </div>
                     </div>
                   </div>
+                  {data?.data?.products?.features.length != 0 ? (
+                    <>
+                      {" "}
+                      <div className="blog-details__meta col-xl-12">
+                        <div className="blog-details__tags">
+                          <span>DETAILS</span>
+                        </div>
+                      </div>
+                    </>
+                  ) : null}
 
-                  <div className="blog-details__meta col-xl-12">
-                    <div className="blog-details__tags">
-                      <span>DETAILS</span>
-                    </div>
-
-                  </div>
-
-                  <div className="blog-detail">
-                    <div style={{ width: "100%" }}>
-                      <Flex align="center" justify="center" width="100%">
-                        <TableContainer
-                          className="content-table"
-                          width="70%"
-                          border="2px"
-                          borderColor={"blackAlpha.300"}
-                        >
-                          <Table
-                            variant="striped"
-                            colorScheme={"blackAlpha"}
-                            size="lg"
-                          >
-                            <Thead>
-                              <Tr>
-                                <Th>S.N.</Th>
-                                <Th>PARAMETER</Th>
-                                <Th>SPECIFICATION</Th>
-                              </Tr>
-                            </Thead>
-
-                            <Tbody>
-                              {data?.data?.products?.features.map((elem,index) => {
-                                return (
-                                  <Tr key={index} style={{fontSize:"14px"}}>
-                                    <Td>{index+1}</Td>
-                                    <Td>{elem.parameters}</Td>
-                                    <Td>{elem.specifications}</Td>
+                  {data?.data?.products?.features.length != 0 ? (
+                    <>
+                      <div className="blog-detail">
+                        <div style={{ width: "100%" }}>
+                          <Flex align="center" justify="center" width="100%">
+                            <TableContainer
+                              className="content-table"
+                              width="70%"
+                              border="2px"
+                              borderColor={"blackAlpha.300"}
+                            >
+                              <Table
+                                variant="striped"
+                                colorScheme={"blackAlpha"}
+                                size="lg"
+                              >
+                                <Thead>
+                                  <Tr>
+                                    <Th>S.N.</Th>
+                                    <Th>PARAMETER</Th>
+                                    <Th>SPECIFICATION</Th>
                                   </Tr>
-                                );
-                              })}
-                            </Tbody>
+                                </Thead>
 
-                          </Table>
-                        </TableContainer>
-                      </Flex>
-                    </div>
-                  </div>
+                                <Tbody>
+                                  {data?.data?.products?.features.map(
+                                    (elem, index) => {
+                                      return (
+                                        <Tr
+                                          key={index}
+                                          style={{ fontSize: "14px" }}
+                                        >
+                                          <Td>{index + 1}</Td>
+                                          <Td>{elem.parameters}</Td>
+                                          <Td>{elem.specifications}</Td>
+                                        </Tr>
+                                      );
+                                    }
+                                  )}
+                                </Tbody>
+                              </Table>
+                            </TableContainer>
+                          </Flex>
+                        </div>
+                      </div>
+                    </>
+                  ) : null}
                 </div>
               </section>
             </>

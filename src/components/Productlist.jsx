@@ -77,7 +77,7 @@ const Productlist = () => {
                   <div className="block-title__image"></div>
 
                   <p>Our Best Products</p>
-                  <h3>Popular Products for You</h3>
+                  <h3> Products for You</h3>
                 </div>
               </div>
               <div className="col-lg-6">

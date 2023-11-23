@@ -84,7 +84,7 @@ const Footer = () => {
 
       <div className="bottom-footer">
         <div className="container" style={{alignItems:"center",display:"flex",justifyContent:"space-around",gap:"1rem"}}>
-          <p>© Copyright @ Duwal RandR Pvt Ltd {new Date().getFullYear()}  </p>
+          <p>© Copyright {new Date().getFullYear()} @ Duwal RandR Pvt Ltd   </p>
 
           <p>Created by  <a href="https://www.dotsamsara.com/" target="__blank" style={{textDecoration:"underline"}} >Dot Samsara</a>  </p>
      
